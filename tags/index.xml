@@ -1,1 +1,92 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on IT Technical Blogs</title><link>https://karthikeayan.github.io/tags/</link><description>Recent content in Tags on IT Technical Blogs</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 21 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://karthikeayan.github.io/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>aws</title><link>https://karthikeayan.github.io/tags/aws/</link><pubDate>Thu, 21 Jan 2021 00:00:00 +0000</pubDate><guid>https://karthikeayan.github.io/tags/aws/</guid><description/></item><item><title>s3</title><link>https://karthikeayan.github.io/tags/s3/</link><pubDate>Thu, 21 Jan 2021 00:00:00 +0000</pubDate><guid>https://karthikeayan.github.io/tags/s3/</guid><description/></item><item><title>state</title><link>https://karthikeayan.github.io/tags/state/</link><pubDate>Thu, 21 Jan 2021 00:00:00 +0000</pubDate><guid>https://karthikeayan.github.io/tags/state/</guid><description/></item><item><title>terraform</title><link>https://karthikeayan.github.io/tags/terraform/</link><pubDate>Thu, 21 Jan 2021 00:00:00 +0000</pubDate><guid>https://karthikeayan.github.io/tags/terraform/</guid><description/></item><item><title>fargate</title><link>https://karthikeayan.github.io/tags/fargate/</link><pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate><guid>https://karthikeayan.github.io/tags/fargate/</guid><description/></item><item><title>firelens</title><link>https://karthikeayan.github.io/tags/firelens/</link><pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate><guid>https://karthikeayan.github.io/tags/firelens/</guid><description/></item><item><title>netflix-eureka</title><link>https://karthikeayan.github.io/tags/netflix-eureka/</link><pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate><guid>https://karthikeayan.github.io/tags/netflix-eureka/</guid><description/></item><item><title>service-discovery</title><link>https://karthikeayan.github.io/tags/service-discovery/</link><pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate><guid>https://karthikeayan.github.io/tags/service-discovery/</guid><description/></item><item><title>home</title><link>https://karthikeayan.github.io/tags/home/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://karthikeayan.github.io/tags/home/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on IT Technical Blogs</title>
+    <link>https://karthikeayan.github.io/tags/</link>
+    <description>Recent content in Tags on IT Technical Blogs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 21 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://karthikeayan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>aws</title>
+      <link>https://karthikeayan.github.io/tags/aws/</link>
+      <pubDate>Thu, 21 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://karthikeayan.github.io/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>s3</title>
+      <link>https://karthikeayan.github.io/tags/s3/</link>
+      <pubDate>Thu, 21 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://karthikeayan.github.io/tags/s3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>state</title>
+      <link>https://karthikeayan.github.io/tags/state/</link>
+      <pubDate>Thu, 21 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://karthikeayan.github.io/tags/state/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>terraform</title>
+      <link>https://karthikeayan.github.io/tags/terraform/</link>
+      <pubDate>Thu, 21 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://karthikeayan.github.io/tags/terraform/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fargate</title>
+      <link>https://karthikeayan.github.io/tags/fargate/</link>
+      <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://karthikeayan.github.io/tags/fargate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>firelens</title>
+      <link>https://karthikeayan.github.io/tags/firelens/</link>
+      <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://karthikeayan.github.io/tags/firelens/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>netflix-eureka</title>
+      <link>https://karthikeayan.github.io/tags/netflix-eureka/</link>
+      <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://karthikeayan.github.io/tags/netflix-eureka/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>service-discovery</title>
+      <link>https://karthikeayan.github.io/tags/service-discovery/</link>
+      <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://karthikeayan.github.io/tags/service-discovery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>home</title>
+      <link>https://karthikeayan.github.io/tags/home/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://karthikeayan.github.io/tags/home/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
