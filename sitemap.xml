@@ -48,27 +48,7 @@
   </url>
   
   <url>
-    <loc>https://karthikeayan.github.io/tags/fargate/</loc>
-    <lastmod>2020-06-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://karthikeayan.github.io/tags/firelens/</loc>
-    <lastmod>2020-06-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://karthikeayan.github.io/tags/netflix-eureka/</loc>
-    <lastmod>2020-06-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://karthikeayan.github.io/post/netflix-eureka-on-aws-fargate/</loc>
-    <lastmod>2020-06-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://karthikeayan.github.io/tags/service-discovery/</loc>
     <lastmod>2020-06-22T00:00:00+00:00</lastmod>
   </url>
   
