@@ -14,7 +14,7 @@
 </script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Tags</title>
+        <title>java-dynamic-heap-size</title>
         
         <style>
 
@@ -77,9 +77,6 @@
 <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
  <meta name="generator" content="Hugo 0.79.1" />
         
-            <link href="/tags/index.xml" rel="alternate" type="application/rss&#43;xml" title="IT Technical Blogs" />
-            <link href="/tags/index.xml" rel="feed" type="application/rss&#43;xml" title="IT Technical Blogs" />
-        
 
         
 
@@ -97,7 +94,7 @@
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand visible-xs" href="#">Tags</a>
+                    <a class="navbar-brand visible-xs" href="#">java-dynamic-heap-size</a>
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -140,69 +137,67 @@
 
 <main>
 
-    <h2>Tags</h2>
+    <div>
+        <h2>java-dynamic-heap-size</h2>
+        <h5>May 31, 2021</h5>
+        
+<a href="https://karthikeayan.github.io/tags/java"><kbd class="item-tag">java</kbd></a>
 
-     <div class="item">
+<a href="https://karthikeayan.github.io/tags/heap"><kbd class="item-tag">heap</kbd></a>
 
-    
-    
-    
+<a href="https://karthikeayan.github.io/tags/memory"><kbd class="item-tag">memory</kbd></a>
 
-    
-    
+<a href="https://karthikeayan.github.io/tags/oom"><kbd class="item-tag">oom</kbd></a>
 
-    <h4><a href="/tags/aws/">aws</a></h4>
-    <h5>January 21, 2021</h5>
-    
-
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/tags/s3/">s3</a></h4>
-    <h5>January 21, 2021</h5>
-    
+<a href="https://karthikeayan.github.io/tags/dynamic"><kbd class="item-tag">dynamic</kbd></a>
 
 
-</div>
-  <div class="item">
+    </div>
 
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/tags/state/">state</a></h4>
-    <h5>January 21, 2021</h5>
-    
-
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/tags/terraform/">terraform</a></h4>
-    <h5>January 21, 2021</h5>
-    
-
-
-</div>
-  <div class="item">
+    <div align="start" class="content"><h1 id="java-dynamic-heap-size">Java Dynamic Heap Size</h1>
+<p>Below statistics are tested on: amazoncorretto:8-alpine-jre</p>
+<h3 id="percentage-values-can-be-used-to-set-maximum-heap-size">Percentage values can be used to set Maximum Heap Size:</h3>
+<pre><code>java -XX:+HeapDumpOnOutOfMemoryError -XX:OnError='echo JVM exited with error' \
+  -XX:MaxRAMPercentage=90.0 \
+  -XX:MinRAMPercentage=40.0 \
+  -XX:+PrintGCDetails -jar app.jar
+</code></pre><p>When using percentage java heap size is set as below,</p>
+<table>
+<thead>
+<tr>
+<th>Container Memory</th>
+<th style="text-align:center">Heap Size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8G</td>
+<td style="text-align:center">6.40G</td>
+</tr>
+<tr>
+<td>16G</td>
+<td style="text-align:center">12.80G</td>
+</tr>
+<tr>
+<td>32G</td>
+<td style="text-align:center">25.60G</td>
+</tr>
+<tr>
+<td>64G</td>
+<td style="text-align:center">26.67G</td>
+</tr>
+<tr>
+<td>128G</td>
+<td style="text-align:center">26.67G</td>
+</tr>
+</tbody>
+</table>
+<p>So, JVM Heap Size doesn&rsquo;t go beyond 26.67G when using XX:MaxRAMPercentage</p>
+<h3 id="use-static-value-to-set-maximum-heap-size-when-container-memory-is-greater-than-32g">Use static value to set Maximum Heap Size when container memory is greater than 32G</h3>
+<pre><code>java -XX:+HeapDumpOnOutOfMemoryError -XX:OnError='echo JVM exited with error' \
+    -Xmx=64G \
+    -XX:+PrintGCDetails -jar app.jar
+</code></pre></div>
 
     
     
@@ -210,36 +205,7 @@
 
     
     
-
-    <h4><a href="/tags/firelens/">firelens</a></h4>
-    <h5>June 22, 2020</h5>
-    
-
-
-</div>
- 
-
 </main>
-
-
-
-<div class="pages">
-
-    
-        <a class="icon pages-icon" href="/tags/" rel="prev">
-            <i class="fa fa-arrow-left"></i>
-        </a>
-    
-
-    
-        <a class="icon pages-icon" href="/tags/page/3/" rel="next">
-            <i class="fa fa-arrow-right"></i>
-        </a>
-    
-
-</div>
-
-
 
         <footer>
             <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>

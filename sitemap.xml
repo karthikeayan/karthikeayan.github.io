@@ -3,17 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://karthikeayan.github.io/tags/aws/</loc>
-    <lastmod>2021-01-21T00:00:00+00:00</lastmod>
+    <loc>https://karthikeayan.github.io/tags/dynamic/</loc>
+    <lastmod>2021-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://karthikeayan.github.io/tags/heap/</loc>
+    <lastmod>2021-05-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://karthikeayan.github.io/</loc>
-    <lastmod>2021-01-21T00:00:00+00:00</lastmod>
+    <lastmod>2021-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://karthikeayan.github.io/tags/java/</loc>
+    <lastmod>2021-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://karthikeayan.github.io/post/java-dynamic-heap-size/</loc>
+    <lastmod>2021-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://karthikeayan.github.io/tags/memory/</loc>
+    <lastmod>2021-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://karthikeayan.github.io/tags/oom/</loc>
+    <lastmod>2021-05-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://karthikeayan.github.io/post/</loc>
+    <lastmod>2021-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://karthikeayan.github.io/tags/</loc>
+    <lastmod>2021-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://karthikeayan.github.io/tags/aws/</loc>
     <lastmod>2021-01-21T00:00:00+00:00</lastmod>
   </url>
   
@@ -24,11 +59,6 @@
   
   <url>
     <loc>https://karthikeayan.github.io/tags/state/</loc>
-    <lastmod>2021-01-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://karthikeayan.github.io/tags/</loc>
     <lastmod>2021-01-21T00:00:00+00:00</lastmod>
   </url>
   
