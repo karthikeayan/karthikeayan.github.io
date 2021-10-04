@@ -6,7 +6,19 @@
     <description>Recent content in Posts on IT Technical Blogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 31 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://karthikeayan.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://karthikeayan.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>jq-cheatsheet</title>
+      <link>https://karthikeayan.github.io/post/jq-cheatsheet/</link>
+      <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://karthikeayan.github.io/post/jq-cheatsheet/</guid>
+      <description>JQ CheatSheet If condition
+aws apigateway get-rest-apis --profile prod | jq &#39;.items[] | select(.name == &amp;quot;My Secure API&amp;quot;) | .id&#39; -r Multiple if condition
+aws s3api get-object-tagging --bucket my-bucket --key screenshot.png | jq &#39;.TagSet[] | select(.Key == &amp;quot;dev&amp;quot; and .Value == &amp;quot;true&amp;quot;)&#39; If condition, print parent element
+aws apigateway get-rest-apis --profile prod | jq &#39;.items[] | . as $item | select(.name == &amp;quot;My Secure API&amp;quot;) | $item&#39; </description>
+    </item>
+    
     <item>
       <title>java-dynamic-heap-size</title>
       <link>https://karthikeayan.github.io/post/java-dynamic-heap-size/</link>
