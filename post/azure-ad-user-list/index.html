@@ -178,17 +178,17 @@
 <p>So, I have to install Azure CLI,</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install azure-cli
 </code></pre></div><p>Getting authentication and authorization configuration was faily simple, below command will redirect to your browser and use SSO to login into Azure.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">az login --allow-no-subscriptions
-</code></pre></div><p>Once I logged in with the CLI, I used below script to check if the user is still present in the Azure AD or not. This will print the users whose details are not present in Azure AD.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/usr/local/bin/bash
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">while</span> IFS<span style="color:#f92672">=</span> read -r line; <span style="color:#66d9ef">do</span>
-    length<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>az ad user list --upn $line | jq length<span style="color:#66d9ef">)</span>
-    <span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> $length <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;0&#34;</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+<pre><code>az login --allow-no-subscriptions
+</code></pre><p>Once I logged in with the CLI, I used below script to check if the user is still present in the Azure AD or not. This will print the users whose details are not present in Azure AD.</p>
+<pre><code>#!/usr/local/bin/bash
+
+while IFS= read -r line; do
+    length=$(az ad user list --upn $line | jq length)
+    if [[ $length == &quot;0&quot; ]]; then
        echo $line
-    <span style="color:#66d9ef">fi</span>
-<span style="color:#66d9ef">done</span> &lt; jenkins-users.txt
-</code></pre></div><p>jenkins-users.txt. In this file I had the list of user list whoes entries were present in the CI tool&rsquo;s authorization list.</p>
+    fi
+done &lt; jenkins-users.txt
+</code></pre><p>jenkins-users.txt. In this file I had the list of user list whoes entries were present in the CI tool&rsquo;s authorization list.</p>
 </div>
 
     
