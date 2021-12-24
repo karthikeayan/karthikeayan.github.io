@@ -166,14 +166,14 @@
 <p>ECS is a managed container orchestration service by AWS. Known for its simplicity, especially ECS Fargate.</p>
 <p>Since ECS Fargate nodes are completely managed by AWS, there is no way to SSH into the node.</p>
 <p>Also ECS was lacking a command line option just like,</p>
-<pre><code>kubectl exec
-</code></pre><p>On March 2021, AWS launched a feature which is similar to &ldquo;kubectl exec&rdquo; to obtain a shell access of a container running on ECS Fargate.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl exec
+</code></pre></div><p>On March 2021, AWS launched a feature which is similar to &ldquo;kubectl exec&rdquo; to obtain a shell access of a container running on ECS Fargate.</p>
 <p><a href="https://aws.amazon.com/blogs/containers/new-using-amazon-ecs-exec-access-your-containers-fargate-ec2/">https://aws.amazon.com/blogs/containers/new-using-amazon-ecs-exec-access-your-containers-fargate-ec2/</a></p>
 <p>This helped me a lot to troubleshoot issues.</p>
 <p>Since I have to login into lots of different containers running on different ECS Clusters which in turn running on different AWS Accounts, it became difficult to copy paste and edit the command everytime.</p>
 <p>So, I just wrote a very simple shell script which can help me. Here is the script.</p>
-<pre><code>#!/usr/local/bin/bash
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/usr/local/bin/bash
+</span><span style="color:#75715e"></span>
 echo Enter Cluster Name:
 read -e cluster_name
 
@@ -186,24 +186,24 @@ read -e service_name
 echo Enter AWS Profile Name:
 read -e profile
 
-region=&quot;eu-west-1&quot;
+region<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;eu-west-1&#34;</span>
 
-task_ids=($(aws ecs list-tasks --cluster ${cluster_name} --service-name ${service_name} --profile ${profile} --region ${region} | jq '.taskArns[]' -r | cut -d'/' -f3))
+task_ids<span style="color:#f92672">=(</span><span style="color:#66d9ef">$(</span>aws ecs list-tasks --cluster <span style="color:#e6db74">${</span>cluster_name<span style="color:#e6db74">}</span> --service-name <span style="color:#e6db74">${</span>service_name<span style="color:#e6db74">}</span> --profile <span style="color:#e6db74">${</span>profile<span style="color:#e6db74">}</span> --region <span style="color:#e6db74">${</span>region<span style="color:#e6db74">}</span> | jq <span style="color:#e6db74">&#39;.taskArns[]&#39;</span> -r | cut -d<span style="color:#e6db74">&#39;/&#39;</span> -f3<span style="color:#66d9ef">)</span><span style="color:#f92672">)</span>
 
-counter=1
+counter<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
 declare -A tasks
-for i in &quot;${task_ids[@]}&quot;
-do
-  echo &quot;${counter}: ${i}&quot;
-  tasks[&quot;${counter}&quot;]=&quot;${i}&quot;
-  counter=$((counter+1))
-done
+<span style="color:#66d9ef">for</span> i in <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>task_ids[@]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">do</span>
+  echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>counter<span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">${</span>i<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+  tasks<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>counter<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">]=</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>i<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+  counter<span style="color:#f92672">=</span><span style="color:#66d9ef">$((</span>counter+1<span style="color:#66d9ef">))</span>
+<span style="color:#66d9ef">done</span>
 
 echo Enter Task Number:
 read task_counter
 
-aws ecs execute-command --cluster ${cluster_name} --task ${tasks[&quot;${task_counter}&quot;]} --container ${container_name} --interactive --command &quot;/bin/sh&quot; --profile ${profile} --region ${region}
-</code></pre></div>
+aws ecs execute-command --cluster <span style="color:#e6db74">${</span>cluster_name<span style="color:#e6db74">}</span> --task <span style="color:#e6db74">${</span>tasks[<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>task_counter<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>]<span style="color:#e6db74">}</span> --container <span style="color:#e6db74">${</span>container_name<span style="color:#e6db74">}</span> --interactive --command <span style="color:#e6db74">&#34;/bin/sh&#34;</span> --profile <span style="color:#e6db74">${</span>profile<span style="color:#e6db74">}</span> --region <span style="color:#e6db74">${</span>region<span style="color:#e6db74">}</span>
+</code></pre></div></div>
 
     
     
