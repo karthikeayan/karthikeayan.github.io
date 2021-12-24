@@ -176,8 +176,8 @@
 <p>I then started thinking, if it is possible with Web UI, there should be a CLI for this. After Googling for Azure AD CLI, found this.</p>
 <p><a href="https://docs.microsoft.com/en-us/cli/azure/ad/user?view=azure-cli-latest#az_ad_user_list">https://docs.microsoft.com/en-us/cli/azure/ad/user?view=azure-cli-latest#az_ad_user_list</a></p>
 <p>So, I have to install Azure CLI,</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install azure-cli
-</code></pre></div><p>Getting authentication and authorization configuration was faily simple, below command will redirect to your browser and use SSO to login into Azure.</p>
+<pre><code>brew install azure-cli
+</code></pre><p>Getting authentication and authorization configuration was faily simple, below command will redirect to your browser and use SSO to login into Azure.</p>
 <pre><code>az login --allow-no-subscriptions
 </code></pre><p>Once I logged in with the CLI, I used below script to check if the user is still present in the Azure AD or not. This will print the users whose details are not present in Azure AD.</p>
 <pre><code>#!/usr/local/bin/bash
