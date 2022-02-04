@@ -167,10 +167,10 @@
 <pre><code>aws s3api get-object-tagging --bucket my-bucket --key screenshot.png | jq '.TagSet[] | select(.Key == &quot;dev&quot; and .Value == &quot;true&quot;)'
 </code></pre><p>If condition, print parent element</p>
 <pre><code>aws apigateway get-rest-apis --profile prod | jq '.items[] | . as $item | select(.name == &quot;My Secure API&quot;) | $item'
+</code></pre><p>If condition, print parent element with contains</p>
+<pre><code>aws elbv2 describe-load-balancers | jq --arg lbname \&quot;${lb_name}\&quot; '.LoadBalancers[] | select( (.LoadBalancerName | contains($lbname)) and .Scheme == &quot;internal&quot; ) | .DNSName' -r
 </code></pre><p>Pass argument to jq from Jenkins sh step</p>
 <pre><code>aws appconfig list-configuration-profiles --application-id ${appId} | jq --arg rds \&quot;${rds_name}\&quot; '.Items[] | select(.Name == $rds) | .Id' -r
-</code></pre><p>Condition on the inner element but return parent element</p>
-<pre><code>aws elbv2 describe-load-balancers | jq --arg lbname \&quot;${lb_name}\&quot; '.LoadBalancers[] | select( (.LoadBalancerName | contains($lbname)) and .Scheme == &quot;internal&quot; ) | .DNSName' -r
 </code></pre></div>
 
     
