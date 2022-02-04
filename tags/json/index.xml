@@ -16,7 +16,7 @@
       <description>JQ CheatSheet If condition
 aws apigateway get-rest-apis --profile prod | jq &#39;.items[] | select(.name == &amp;quot;My Secure API&amp;quot;) | .id&#39; -r Multiple if condition
 aws s3api get-object-tagging --bucket my-bucket --key screenshot.png | jq &#39;.TagSet[] | select(.Key == &amp;quot;dev&amp;quot; and .Value == &amp;quot;true&amp;quot;)&#39; If condition, print parent element
-aws apigateway get-rest-apis --profile prod | jq &#39;.items[] | . as $item | select(.name == &amp;quot;My Secure API&amp;quot;) | $item&#39; </description>
+aws apigateway get-rest-apis --profile prod | jq &#39;.items[] | . as $item | select(.name == &amp;quot;My Secure API&amp;quot;) | $item&#39; Pass argument to jq from Jenkins sh step</description>
     </item>
     
   </channel>
