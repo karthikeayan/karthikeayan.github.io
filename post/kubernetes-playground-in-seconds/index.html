@@ -14,7 +14,7 @@
 </script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Tags</title>
+        <title>kubernetes-playground-in-seconds</title>
         
         <style>
 
@@ -77,9 +77,6 @@
 <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
  <meta name="generator" content="Hugo 0.79.1" />
         
-            <link href="/tags/index.xml" rel="alternate" type="application/rss&#43;xml" title="Just a blog!" />
-            <link href="/tags/index.xml" rel="feed" type="application/rss&#43;xml" title="Just a blog!" />
-        
 
         
             <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170492285-1"></script>
@@ -105,7 +102,7 @@
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand visible-xs" href="#">Tags</a>
+                    <a class="navbar-brand visible-xs" href="#">kubernetes-playground-in-seconds</a>
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -148,39 +145,32 @@
 
 <main>
 
-    <h2>Tags</h2>
+    <div>
+        <h2>kubernetes-playground-in-seconds</h2>
+        <h5>February 12, 2022</h5>
+        
+<a href="https://karthikeayan.github.io/tags/kubernetes"><kbd class="item-tag">kubernetes</kbd></a>
 
-     <div class="item">
+<a href="https://karthikeayan.github.io/tags/playground"><kbd class="item-tag">playground</kbd></a>
 
-    
-    
-    
+<a href="https://karthikeayan.github.io/tags/sandbox"><kbd class="item-tag">sandbox</kbd></a>
 
-    
-    
-
-    <h4><a href="/tags/dynamic/">dynamic</a></h4>
-    <h5>May 31, 2021</h5>
-    
+<a href="https://karthikeayan.github.io/tags/practice"><kbd class="item-tag">practice</kbd></a>
 
 
-</div>
-  <div class="item">
+    </div>
 
-    
-    
-    
+    <div align="start" class="content"><h1 id="get-kubernetes-cluster-in-seconds-to-play-with">Get kubernetes cluster in seconds to play with</h1>
+<p>Go to</p>
+<pre><code>https://labs.play-with-k8s.com/
+</code></pre><p>Login and execute below commands</p>
+<pre><code>kubeadm init --apiserver-advertise-address $(hostname -i)
+</code></pre><p>Copy kubeadm join command from the kubeadm init output</p>
+<pre><code>kubeadm join --token SOMETOKEN SOMEIPADDRESS --discovery-token-ca-cert-hash SOMESHAHASH
 
-    
-    
-
-    <h4><a href="/tags/heap/">heap</a></h4>
-    <h5>May 31, 2021</h5>
-    
-
-
-</div>
-  <div class="item">
+ kubectl apply -n kube-system -f \
+    &quot;https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 |tr -d '\n')&quot;
+</code></pre></div>
 
     
     
@@ -188,66 +178,7 @@
 
     
     
-
-    <h4><a href="/tags/java/">java</a></h4>
-    <h5>May 31, 2021</h5>
-    
-
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/tags/memory/">memory</a></h4>
-    <h5>May 31, 2021</h5>
-    
-
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/tags/oom/">oom</a></h4>
-    <h5>May 31, 2021</h5>
-    
-
-
-</div>
- 
-
 </main>
-
-
-
-<div class="pages">
-
-    
-        <a class="icon pages-icon" href="/tags/page/5/" rel="prev">
-            <i class="fa fa-arrow-left"></i>
-        </a>
-    
-
-    
-        <a class="icon pages-icon" href="/tags/page/7/" rel="next">
-            <i class="fa fa-arrow-right"></i>
-        </a>
-    
-
-</div>
-
-
 
         <footer>
             <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
