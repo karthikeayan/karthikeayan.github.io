@@ -14,9 +14,9 @@
       
       <guid>https://karthikeayan.github.io/post/kubernetes-playground-in-seconds/</guid>
       <description>Get kubernetes cluster in seconds to play with Go to
-https://labs.play-with-k8s.com/ Login and execute below commands
-kubeadm init --apiserver-advertise-address $(hostname -i) Copy kubeadm join command from the kubeadm init output
-kubeadm join --token SOMETOKEN SOMEIPADDRESS --discovery-token-ca-cert-hash SOMESHAHASH kubectl apply -n kube-system -f \ &amp;quot;https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 |tr -d &#39;\n&#39;)&amp;quot; kubectl taint nodes $(hostname) node-role.kubernetes.io/master:NoSchedule- </description>
+https://labs.play-with-k8s.com/ Login and execute below command on instance1
+kubeadm init --apiserver-advertise-address $(hostname -i) Copy kubeadm join command from the kubeadm init output and execute join in instance2
+kubeadm join --token SOMETOKEN SOMEIPADDRESS --discovery-token-ca-cert-hash SOMESHAHASH kubectl apply -n kube-system -f \ &amp;quot;https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 |tr -d &#39;\n&#39;)&amp;quot; </description>
     </item>
     
     <item>

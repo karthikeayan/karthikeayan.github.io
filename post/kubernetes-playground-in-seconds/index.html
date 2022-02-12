@@ -163,15 +163,13 @@
     <div align="start" class="content"><h1 id="get-kubernetes-cluster-in-seconds-to-play-with">Get kubernetes cluster in seconds to play with</h1>
 <p>Go to</p>
 <pre><code>https://labs.play-with-k8s.com/
-</code></pre><p>Login and execute below commands</p>
+</code></pre><p>Login and execute below command on instance1</p>
 <pre><code>kubeadm init --apiserver-advertise-address $(hostname -i)
-</code></pre><p>Copy kubeadm join command from the kubeadm init output</p>
+</code></pre><p>Copy kubeadm join command from the kubeadm init output and execute join in instance2</p>
 <pre><code>kubeadm join --token SOMETOKEN SOMEIPADDRESS --discovery-token-ca-cert-hash SOMESHAHASH
 
 kubectl apply -n kube-system -f \
     &quot;https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 |tr -d '\n')&quot;
-    
-kubectl taint nodes $(hostname) node-role.kubernetes.io/master:NoSchedule-
 </code></pre></div>
 
     
