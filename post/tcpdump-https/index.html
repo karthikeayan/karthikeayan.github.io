@@ -14,7 +14,7 @@
 </script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Tags</title>
+        <title>tcpdump-https</title>
         
         <style>
 
@@ -77,9 +77,6 @@
 <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
  <meta name="generator" content="Hugo 0.79.1" />
         
-            <link href="/tags/index.xml" rel="alternate" type="application/rss&#43;xml" title="Just a blog!" />
-            <link href="/tags/index.xml" rel="feed" type="application/rss&#43;xml" title="Just a blog!" />
-        
 
         
             <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170492285-1"></script>
@@ -105,7 +102,7 @@
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand visible-xs" href="#">Tags</a>
+                    <a class="navbar-brand visible-xs" href="#">tcpdump-https</a>
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -148,106 +145,132 @@
 
 <main>
 
-    <h2>Tags</h2>
+    <div>
+        <h2>tcpdump-https</h2>
+        <h5>May 21, 2023</h5>
+        
+<a href="https://karthikeayan.github.io/tags/tcpdump"><kbd class="item-tag">tcpdump</kbd></a>
 
-     <div class="item">
+<a href="https://karthikeayan.github.io/tags/https"><kbd class="item-tag">https</kbd></a>
 
-    
-    
-    
+<a href="https://karthikeayan.github.io/tags/network"><kbd class="item-tag">network</kbd></a>
 
-    
-    
+<a href="https://karthikeayan.github.io/tags/packet"><kbd class="item-tag">packet</kbd></a>
 
-    <h4><a href="/tags/memory/">memory</a></h4>
-    <h5>May 31, 2021</h5>
-    
+<a href="https://karthikeayan.github.io/tags/kubernetes"><kbd class="item-tag">kubernetes</kbd></a>
 
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/tags/oom/">oom</a></h4>
-    <h5>May 31, 2021</h5>
-    
+<a href="https://karthikeayan.github.io/tags/observability"><kbd class="item-tag">observability</kbd></a>
 
 
-</div>
-  <div class="item">
+    </div>
+
+    <div align="start" class="content"><h1 id="how-to-capture-https-outbound-requestresponse-headers">How to capture HTTPS outbound request/response headers?</h1>
+<p>What to do when you get unexpected HTTPS Response code from your application or any third party application which you are using that connects to Rest endpoint? Especially when we don&rsquo;t have access to the target Rest endpoint?
+When we seek for help, everyone will suggest to see the response headers of the HTTPS request.
+But how can we see the response header? There are couple of ways:</p>
+<ul>
+<li>Log HTTPS request/response header in your application - Quicker solution</li>
+<li>Use any monitoring tools that provides this feature, could be costly</li>
+<li>Look for any tool. Simple Google search will suggest to use Fiddler but from my quick look that is for local developement debugging.</li>
+<li>Look for any other tool. HTTPToolKit looks promising but as of writing this article, it doesn&rsquo;t have headless feature. So, running this in your infra may be challenging. Especially in Kubernetes.</li>
+<li>Stick with old school approach, tcpdump.</li>
+</ul>
+<h2 id="tcp-dump">TCP Dump</h2>
+<p>Simple isn&rsquo;t it?</p>
+<ul>
+<li>Just take tcp dump by logging into the target pod/server</li>
+<li>Install tcpdump (better copy the binary)</li>
+<li>Take dump and copy it to your local</li>
+<li>Load it to Wireshark
+Done, isn&rsquo;t it?</li>
+</ul>
+<p>But you don&rsquo;t see any HTTPS traffic in the Wireshark UI. What are we missing?</p>
+<p>Since HTTPS requests are HTTP over TLS. All the HTTPS requests are encrypted. We need the secrets to decrypt the data.</p>
+<h2 id="what-is-sslkeylogfile">What is SSLKEYLOGFILE?</h2>
+<p>It is an environment variable which is understood by most common used applications.</p>
+<h3 id="does-curl-supports-it">Does Curl supports it?</h3>
+<p>Yes, Just set the value of SSLKEYLOGFILE to the file path in the shell.</p>
+<pre><code>$ export SSLKEYLOGFILE=/tmp/sslkeylogfile.log
+
+# Start tcpdump in another shell
+
+$ curl https://google.com
+&lt;HTML&gt;&lt;HEAD&gt;&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html;charset=utf-8&quot;&gt;
+&lt;TITLE&gt;301 Moved&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;
+&lt;H1&gt;301 Moved&lt;/H1&gt;
+The document has moved
+&lt;A HREF=&quot;https://www.google.com/&quot;&gt;here&lt;/A&gt;.
+&lt;/BODY&gt;&lt;/HTML&gt;
+
+$ cat /tmp/SSLKEYLOGFILE
+CLIENT_RANDOM C76EE3XXXXX FB0CE69XXXXX
+</code></pre><h3 id="does-browsers-supports-it">Does browsers supports it?</h3>
+<p>Yes, Just set the value of SSLKEYLOGFILE to the file path in the shell and open browser from the shell.</p>
+<pre><code>$ export SSLKEYLOGFILE=/tmp/sslkeylogfile.log
+
+# Start tcpdump in another shell
+
+$ /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
+
+$ cat /tmp/SSLKEYLOGFILE
+CLIENT_RANDOM C76EE3XXXXX FB0CE69XXXXX
+</code></pre><h2 id="tell-wireshark-to-use-the-sslkeylogfile">Tell Wireshark to use the SSLKEYLOGFILE</h2>
+<p>Go to</p>
+<ul>
+<li>Wireshark Preferences</li>
+<li>Protocols &ndash;&gt; TLS</li>
+<li>(Pre)-Master-Secret log filename &ndash;&gt; Select /tmp/sslkeylogfile.log</li>
+<li>Open dump file</li>
+<li>Thats it, you can see the HTTPS requests</li>
+</ul>
+<h2 id="but-what-about-java-applications">But what about JAVA applications?</h2>
+<p>Make use of Java Agents.</p>
+<ul>
+<li>Download this Jar file, <a href="https://github.com/neykov/extract-tls-secrets">https://github.com/neykov/extract-tls-secrets</a></li>
+<li>Attach it to yoru Java application</li>
+</ul>
+<pre><code>java -javaagent:~/Downloads/extract-tls-secrets-4.0.0.jar=/tmp/sslkeylogfile.log -jar MyApp.jar
+</code></pre><ul>
+<li>In Kubernetes, we can make use of JAVA_TOOL_OPTIONS environment varilable.</li>
+</ul>
+<pre><code>env:
+  name: JAVA_TOOL_OPTIONS
+  value: -javaagent:~/Downloads/extract-tls-secrets-4.0.0.jar=/tmp/sslkeylogfile.log
+</code></pre></div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
 
     
     
     
 
     
-    
+      
 
-    <h4><a href="/tags/s3/">s3</a></h4>
-    <h5>January 21, 2021</h5>
+    <h4><a href="/post/kubernetes-playground-in-seconds/">kubernetes-playground-in-seconds</a></h4>
+    <h5>get-kubernetes-playground-in-seconds</h5>
     
+<a href="https://karthikeayan.github.io/tags/kubernetes"><kbd class="item-tag">kubernetes</kbd></a>
 
+<a href="https://karthikeayan.github.io/tags/playground"><kbd class="item-tag">playground</kbd></a>
 
-</div>
-  <div class="item">
+<a href="https://karthikeayan.github.io/tags/sandbox"><kbd class="item-tag">sandbox</kbd></a>
 
-    
-    
-    
+<a href="https://karthikeayan.github.io/tags/practice"><kbd class="item-tag">practice</kbd></a>
 
-    
-    
-
-    <h4><a href="/tags/state/">state</a></h4>
-    <h5>January 21, 2021</h5>
-    
-
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/tags/terraform/">terraform</a></h4>
-    <h5>January 21, 2021</h5>
-    
 
 
 </div>
  
+    
 
+    
+    
 </main>
-
-
-
-<div class="pages">
-
-    
-        <a class="icon pages-icon" href="/tags/page/7/" rel="prev">
-            <i class="fa fa-arrow-left"></i>
-        </a>
-    
-
-    
-        <a class="icon pages-icon" href="/tags/page/9/" rel="next">
-            <i class="fa fa-arrow-right"></i>
-        </a>
-    
-
-</div>
-
-
 
         <footer>
             <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>

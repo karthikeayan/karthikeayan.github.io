@@ -6,7 +6,61 @@
     <description>Recent content in Tags on Just a blog!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 13 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://karthikeayan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://karthikeayan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>https</title>
+      <link>https://karthikeayan.github.io/tags/https/</link>
+      <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://karthikeayan.github.io/tags/https/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kubernetes</title>
+      <link>https://karthikeayan.github.io/tags/kubernetes/</link>
+      <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://karthikeayan.github.io/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>network</title>
+      <link>https://karthikeayan.github.io/tags/network/</link>
+      <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://karthikeayan.github.io/tags/network/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>observability</title>
+      <link>https://karthikeayan.github.io/tags/observability/</link>
+      <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://karthikeayan.github.io/tags/observability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>packet</title>
+      <link>https://karthikeayan.github.io/tags/packet/</link>
+      <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://karthikeayan.github.io/tags/packet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tcpdump</title>
+      <link>https://karthikeayan.github.io/tags/tcpdump/</link>
+      <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://karthikeayan.github.io/tags/tcpdump/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>blogs</title>
       <link>https://karthikeayan.github.io/tags/blogs/</link>
@@ -22,15 +76,6 @@
       <pubDate>Sun, 13 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>https://karthikeayan.github.io/tags/tech/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>kubernetes</title>
-      <link>https://karthikeayan.github.io/tags/kubernetes/</link>
-      <pubDate>Sat, 12 Feb 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://karthikeayan.github.io/tags/kubernetes/</guid>
       <description></description>
     </item>
     
