@@ -181,15 +181,16 @@ But how can we see the response header? There are couple of ways:</p>
 <li>Just take tcp dump by logging into the target pod/server</li>
 <li>Install tcpdump (better copy the binary)</li>
 <li>Take dump and copy it to your local</li>
-<li>Load it to Wireshark
-Done, isn&rsquo;t it?</li>
+<li>Load it to Wireshark</li>
 </ul>
+<p>Done, isn&rsquo;t it?</p>
 <p>But you don&rsquo;t see any HTTPS traffic in the Wireshark UI. What are we missing?</p>
 <p>Since HTTPS requests are HTTP over TLS. All the HTTPS requests are encrypted. We need the secrets to decrypt the data.</p>
 <h2 id="what-is-sslkeylogfile">What is SSLKEYLOGFILE?</h2>
 <p>It is an environment variable which is understood by most common used applications.</p>
 <h3 id="does-curl-supports-it">Does Curl supports it?</h3>
-<p>Yes, Just set the value of SSLKEYLOGFILE to the file path in the shell.</p>
+<p>Yes, but only the Curl with SSL support. (Build curl with SSL support - <a href="https://stackoverflow.com/questions/28782556/how-do-i-get-curl-to-use-https">https://stackoverflow.com/questions/28782556/how-do-i-get-curl-to-use-https</a>)
+Just set the value of SSLKEYLOGFILE to the file path in the shell.</p>
 <pre><code>$ export SSLKEYLOGFILE=/tmp/sslkeylogfile.log
 
 # Start tcpdump in another shell
