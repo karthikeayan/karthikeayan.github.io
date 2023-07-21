@@ -6,7 +6,17 @@
     <description>Recent content on Just a blog!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://karthikeayan.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://karthikeayan.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>kubernetes-api-resources</title>
+      <link>https://karthikeayan.github.io/post/kubernetes-api-resources/</link>
+      <pubDate>Fri, 21 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://karthikeayan.github.io/post/kubernetes-api-resources/</guid>
+      <description>List of Kubernetes API Resources Kubernetes Version: 1.25 Cloud Provider: AWS EKS
+| NAME SHORTNAMES APIVERSION NAMESPACED KIND VERBS | |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| | apiservices apiregistration.k8s.io/v1 false APIService [create delete deletecollection get list patch update watch] | | bindings v1 true Binding [create] | | certificatesigningrequests csr certificates.k8s.io/v1 false CertificateSigningRequest [create delete deletecollection get list patch update watch] | | clusterrolebindings rbac.authorization.k8s.io/v1 false ClusterRoleBinding [create delete deletecollection get list patch update watch] | | clusterroles rbac.</description>
+    </item>
+    
     <item>
       <title>tcpdump-https</title>
       <link>https://karthikeayan.github.io/post/tcpdump-https/</link>

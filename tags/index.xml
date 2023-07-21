@@ -6,22 +6,31 @@
     <description>Recent content in Tags on Just a blog!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://karthikeayan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://karthikeayan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>https</title>
-      <link>https://karthikeayan.github.io/tags/https/</link>
-      <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
+      <title>api-resources</title>
+      <link>https://karthikeayan.github.io/tags/api-resources/</link>
+      <pubDate>Fri, 21 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://karthikeayan.github.io/tags/https/</guid>
+      <guid>https://karthikeayan.github.io/tags/api-resources/</guid>
       <description></description>
     </item>
     
     <item>
       <title>kubernetes</title>
       <link>https://karthikeayan.github.io/tags/kubernetes/</link>
-      <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 21 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://karthikeayan.github.io/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>https</title>
+      <link>https://karthikeayan.github.io/tags/https/</link>
+      <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://karthikeayan.github.io/tags/https/</guid>
       <description></description>
     </item>
     
