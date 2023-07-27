@@ -4,7 +4,47 @@
   
   <url>
     <loc>https://karthikeayan.github.io/</loc>
-    <lastmod>2023-07-21T00:00:00+00:00</lastmod>
+    <lastmod>2023-07-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://karthikeayan.github.io/post/aws-cloudwatch-k8s-api-log-filter/</loc>
+    <lastmod>2023-07-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://karthikeayan.github.io/tags/eks/</loc>
+    <lastmod>2023-07-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://karthikeayan.github.io/tags/filter/</loc>
+    <lastmod>2023-07-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://karthikeayan.github.io/tags/kubernetes/</loc>
+    <lastmod>2023-07-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://karthikeayan.github.io/tags/logs/</loc>
+    <lastmod>2023-07-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://karthikeayan.github.io/post/</loc>
+    <lastmod>2023-07-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://karthikeayan.github.io/tags/query/</loc>
+    <lastmod>2023-07-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://karthikeayan.github.io/tags/</loc>
+    <lastmod>2023-07-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -13,22 +53,7 @@
   </url>
   
   <url>
-    <loc>https://karthikeayan.github.io/tags/kubernetes/</loc>
-    <lastmod>2023-07-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://karthikeayan.github.io/post/kubernetes-api-resources/</loc>
-    <lastmod>2023-07-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://karthikeayan.github.io/post/</loc>
-    <lastmod>2023-07-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://karthikeayan.github.io/tags/</loc>
     <lastmod>2023-07-21T00:00:00+00:00</lastmod>
   </url>
   

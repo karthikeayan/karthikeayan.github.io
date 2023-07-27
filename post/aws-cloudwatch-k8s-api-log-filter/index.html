@@ -14,7 +14,7 @@
 </script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Tags</title>
+        <title>aws-cloudwatch-k8s-api-log-filter.md</title>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7096296757240217" crossorigin="anonymous"></script>
         
         <style>
@@ -78,9 +78,6 @@
 <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
  <meta name="generator" content="Hugo 0.79.1" />
         
-            <link href="/tags/index.xml" rel="alternate" type="application/rss&#43;xml" title="!" />
-            <link href="/tags/index.xml" rel="feed" type="application/rss&#43;xml" title="!" />
-        
 
         
             <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170492285-1"></script>
@@ -106,7 +103,7 @@
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand visible-xs" href="#">Tags</a>
+                    <a class="navbar-brand visible-xs" href="#">aws-cloudwatch-k8s-api-log-filter.md</a>
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -149,65 +146,59 @@
 
 <main>
 
-    <h2>Tags</h2>
+    <div>
+        <h2>aws-cloudwatch-k8s-api-log-filter.md</h2>
+        <h5>July 27, 2023</h5>
+        
+<a href="https://karthikeayan.github.io/tags/kubernetes"><kbd class="item-tag">kubernetes</kbd></a>
 
-     <div class="item">
+<a href="https://karthikeayan.github.io/tags/eks"><kbd class="item-tag">eks</kbd></a>
 
-    
-    
-    
+<a href="https://karthikeayan.github.io/tags/logs"><kbd class="item-tag">logs</kbd></a>
 
-    
-    
+<a href="https://karthikeayan.github.io/tags/query"><kbd class="item-tag">query</kbd></a>
 
-    <h4><a href="/tags/memory/">memory</a></h4>
-    <h5>May 31, 2021</h5>
-    
-
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/tags/oom/">oom</a></h4>
-    <h5>May 31, 2021</h5>
-    
+<a href="https://karthikeayan.github.io/tags/filter"><kbd class="item-tag">filter</kbd></a>
 
 
-</div>
-  <div class="item">
+    </div>
 
-    
-    
-    
+    <div align="start" class="content"><h1 id="filter-eks-api-server-logs-in-cloudwatch">Filter EKS API Server Logs in Cloudwatch</h1>
+<p>Kubernetes Version: 1.25
+Cloud Provider: AWS EKS</p>
+<ul>
+<li>Open Cloudwatch</li>
+<li>Open Logs Insights</li>
+<li>Select EKS API Server Log group</li>
+</ul>
+<pre><code>fields @timestamp, @message, sourceIPs.0
+| filter responseObject.metadata.name like /REPLACE_NAMEPSACE_NAME_HERE/
+| filter verb like /create/
+| filter requestURI like /api\/v1\/namespaces/
+| filter responseObject.kind like /Namespace/
+| sort @timestamp desc
+</code></pre></div>
 
     
     
-
-    <h4><a href="/tags/s3/">s3</a></h4>
-    <h5>January 21, 2021</h5>
     
-
-
-</div>
-  <div class="item">
+        <h4 class="page-header">Related</h4>
+         <div class="item">
 
     
     
     
 
     
-    
+      
 
-    <h4><a href="/tags/state/">state</a></h4>
-    <h5>January 21, 2021</h5>
+    <h4><a href="/post/kubernetes-api-resources/">kubernetes-api-resources</a></h4>
+    <h5>List of Kubernetes API Resources</h5>
     
+<a href="https://karthikeayan.github.io/tags/kubernetes"><kbd class="item-tag">kubernetes</kbd></a>
+
+<a href="https://karthikeayan.github.io/tags/api-resources"><kbd class="item-tag">api-resources</kbd></a>
+
 
 
 </div>
@@ -218,37 +209,55 @@
     
 
     
+      
+
+    <h4><a href="/post/tcpdump-https/">tcpdump-https</a></h4>
+    <h5>TCP Dump HTTPS</h5>
+    
+<a href="https://karthikeayan.github.io/tags/tcpdump"><kbd class="item-tag">tcpdump</kbd></a>
+
+<a href="https://karthikeayan.github.io/tags/https"><kbd class="item-tag">https</kbd></a>
+
+<a href="https://karthikeayan.github.io/tags/network"><kbd class="item-tag">network</kbd></a>
+
+<a href="https://karthikeayan.github.io/tags/packet"><kbd class="item-tag">packet</kbd></a>
+
+<a href="https://karthikeayan.github.io/tags/kubernetes"><kbd class="item-tag">kubernetes</kbd></a>
+
+<a href="https://karthikeayan.github.io/tags/observability"><kbd class="item-tag">observability</kbd></a>
+
+
+
+</div>
+  <div class="item">
+
+    
+    
     
 
-    <h4><a href="/tags/terraform/">terraform</a></h4>
-    <h5>January 21, 2021</h5>
     
+      
+
+    <h4><a href="/post/kubernetes-playground-in-seconds/">kubernetes-playground-in-seconds</a></h4>
+    <h5>get-kubernetes-playground-in-seconds</h5>
+    
+<a href="https://karthikeayan.github.io/tags/kubernetes"><kbd class="item-tag">kubernetes</kbd></a>
+
+<a href="https://karthikeayan.github.io/tags/playground"><kbd class="item-tag">playground</kbd></a>
+
+<a href="https://karthikeayan.github.io/tags/sandbox"><kbd class="item-tag">sandbox</kbd></a>
+
+<a href="https://karthikeayan.github.io/tags/practice"><kbd class="item-tag">practice</kbd></a>
+
 
 
 </div>
  
+    
 
+    
+    
 </main>
-
-
-
-<div class="pages">
-
-    
-        <a class="icon pages-icon" href="/tags/page/8/" rel="prev">
-            <i class="fa fa-arrow-left"></i>
-        </a>
-    
-
-    
-        <a class="icon pages-icon" href="/tags/page/10/" rel="next">
-            <i class="fa fa-arrow-right"></i>
-        </a>
-    
-
-</div>
-
-
 
         <footer>
             <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>

@@ -6,22 +6,58 @@
     <description>Recent content in Tags on !</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 21 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://karthikeayan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://karthikeayan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>api-resources</title>
-      <link>https://karthikeayan.github.io/tags/api-resources/</link>
-      <pubDate>Fri, 21 Jul 2023 00:00:00 +0000</pubDate>
+      <title>eks</title>
+      <link>https://karthikeayan.github.io/tags/eks/</link>
+      <pubDate>Thu, 27 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://karthikeayan.github.io/tags/api-resources/</guid>
+      <guid>https://karthikeayan.github.io/tags/eks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>filter</title>
+      <link>https://karthikeayan.github.io/tags/filter/</link>
+      <pubDate>Thu, 27 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://karthikeayan.github.io/tags/filter/</guid>
       <description></description>
     </item>
     
     <item>
       <title>kubernetes</title>
       <link>https://karthikeayan.github.io/tags/kubernetes/</link>
-      <pubDate>Fri, 21 Jul 2023 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 27 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://karthikeayan.github.io/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>logs</title>
+      <link>https://karthikeayan.github.io/tags/logs/</link>
+      <pubDate>Thu, 27 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://karthikeayan.github.io/tags/logs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>query</title>
+      <link>https://karthikeayan.github.io/tags/query/</link>
+      <pubDate>Thu, 27 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://karthikeayan.github.io/tags/query/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>api-resources</title>
+      <link>https://karthikeayan.github.io/tags/api-resources/</link>
+      <pubDate>Fri, 21 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://karthikeayan.github.io/tags/api-resources/</guid>
       <description></description>
     </item>
     
