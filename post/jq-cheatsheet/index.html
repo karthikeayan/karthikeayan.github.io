@@ -172,6 +172,14 @@
 <pre><code>aws elbv2 describe-load-balancers | jq --arg lbname \&quot;${lb_name}\&quot; '.LoadBalancers[] | select( (.LoadBalancerName | contains($lbname)) and .Scheme == &quot;internal&quot; ) | .DNSName' -r
 </code></pre><p>Pass argument to jq from Jenkins sh step</p>
 <pre><code>aws appconfig list-configuration-profiles --application-id ${appId} | jq --arg rds \&quot;${rds_name}\&quot; '.Items[] | select(.Name == $rds) | .Id' -r
+</code></pre><p>Find all the deployment names in Kubernetes, which contains environment variable value from from Kubernetes secret with specific key</p>
+<pre><code>k get deploy  -o json \
+  | jq '.items[] | . as $item
+  | .spec.template.spec.containers[].env | select (. != null)
+  | .[].valueFrom | select (. != null)
+  | .secretKeyRef | select (. != null)
+  | select (.key == &quot;YOUR_KUBERNETES_SECRET_KEY&quot;) | $item
+  | .metadata.name' -r
 </code></pre></div>
 
     
