@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>cheatsheet on Karthikeyan Sundararajan</title>
-    <link>https://karthikeayan.github.io/tags/cheatsheet/</link>
-    <description>Recent content in cheatsheet on Karthikeyan Sundararajan</description>
+    <title>cheatsheet on </title>
+    <link>/tags/cheatsheet/</link>
+    <description>Recent content in cheatsheet on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 01 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://karthikeayan.github.io/tags/cheatsheet/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/cheatsheet/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>jq-cheatsheet</title>
-      <link>https://karthikeayan.github.io/post/jq-cheatsheet/</link>
+      <link>/post/jq-cheatsheet/</link>
       <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://karthikeayan.github.io/post/jq-cheatsheet/</guid>
+      <guid>/post/jq-cheatsheet/</guid>
       <description>JQ CheatSheet If condition
 aws apigateway get-rest-apis --profile prod | jq &#39;.items[] | select(.name == &amp;quot;My Secure API&amp;quot;) | .id&#39; -r Multiple if condition
 aws s3api get-object-tagging --bucket my-bucket --key screenshot.png | jq &#39;.TagSet[] | select(.Key == &amp;quot;dev&amp;quot; and .Value == &amp;quot;true&amp;quot;)&#39; If condition, print parent element
