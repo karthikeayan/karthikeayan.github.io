@@ -14,7 +14,7 @@
       
       <guid>https://karthikeayan.github.io/post/aws-cloudwatch-k8s-api-log-filter/</guid>
       <description>Filter EKS API Server Logs in Cloudwatch Kubernetes Version: 1.25 Cloud Provider: AWS EKS
- Open Cloudwatch Open Logs Insights Select EKS API Server Log group  fields @timestamp, @message, sourceIPs.0 | filter responseObject.metadata.name like /REPLACE_NAMEPSACE_NAME_HERE/ | filter verb like /create/ | filter requestURI like /api\/v1\/namespaces/ | filter responseObject.kind like /Namespace/ | sort @timestamp desc </description>
+Open Cloudwatch Open Logs Insights Select EKS API Server Log group fields @timestamp, @message, sourceIPs.0 | filter responseObject.metadata.name like /REPLACE_NAMEPSACE_NAME_HERE/ | filter verb like /create/ | filter requestURI like /api\/v1\/namespaces/ | filter responseObject.kind like /Namespace/ | sort @timestamp desc </description>
     </item>
     
     <item>
@@ -45,7 +45,7 @@
       <description>Get kubernetes cluster in seconds to play with Go to
 https://labs.play-with-k8s.com/ Login and execute below command on instance1
 kubeadm init --apiserver-advertise-address $(hostname -i) Copy kubeadm join command from the kubeadm init output and execute join in instance2
-kubeadm join --token SOMETOKEN SOMEIPADDRESS --discovery-token-ca-cert-hash SOMESHAHASH kubectl apply -n kube-system -f \ &amp;quot;https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 |tr -d &#39;\n&#39;)&amp;quot; </description>
+kubeadm join --token SOMETOKEN SOMEIPADDRESS --discovery-token-ca-cert-hash SOMESHAHASH kubectl apply -n kube-system -f \ &amp;#34;https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 |tr -d &amp;#39;\n&amp;#39;)&amp;#34; </description>
     </item>
     
   </channel>

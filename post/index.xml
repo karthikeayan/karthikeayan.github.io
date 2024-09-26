@@ -14,7 +14,7 @@
       
       <guid>https://karthikeayan.github.io/post/aws-cloudwatch-k8s-api-log-filter/</guid>
       <description>Filter EKS API Server Logs in Cloudwatch Kubernetes Version: 1.25 Cloud Provider: AWS EKS
- Open Cloudwatch Open Logs Insights Select EKS API Server Log group  fields @timestamp, @message, sourceIPs.0 | filter responseObject.metadata.name like /REPLACE_NAMEPSACE_NAME_HERE/ | filter verb like /create/ | filter requestURI like /api\/v1\/namespaces/ | filter responseObject.kind like /Namespace/ | sort @timestamp desc </description>
+Open Cloudwatch Open Logs Insights Select EKS API Server Log group fields @timestamp, @message, sourceIPs.0 | filter responseObject.metadata.name like /REPLACE_NAMEPSACE_NAME_HERE/ | filter verb like /create/ | filter requestURI like /api\/v1\/namespaces/ | filter responseObject.kind like /Namespace/ | sort @timestamp desc </description>
     </item>
     
     <item>
@@ -57,7 +57,7 @@ https://srvaroa.github.io/</description>
       <description>Get kubernetes cluster in seconds to play with Go to
 https://labs.play-with-k8s.com/ Login and execute below command on instance1
 kubeadm init --apiserver-advertise-address $(hostname -i) Copy kubeadm join command from the kubeadm init output and execute join in instance2
-kubeadm join --token SOMETOKEN SOMEIPADDRESS --discovery-token-ca-cert-hash SOMESHAHASH kubectl apply -n kube-system -f \ &amp;quot;https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 |tr -d &#39;\n&#39;)&amp;quot; </description>
+kubeadm join --token SOMETOKEN SOMEIPADDRESS --discovery-token-ca-cert-hash SOMESHAHASH kubectl apply -n kube-system -f \ &amp;#34;https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 |tr -d &amp;#39;\n&amp;#39;)&amp;#34; </description>
     </item>
     
     <item>
@@ -100,9 +100,9 @@ Many of us using Docker Desktop in day to day activities are part of large busin
       
       <guid>https://karthikeayan.github.io/post/jq-cheatsheet/</guid>
       <description>JQ CheatSheet If condition
-aws apigateway get-rest-apis --profile prod | jq &#39;.items[] | select(.name == &amp;quot;My Secure API&amp;quot;) | .id&#39; -r Multiple if condition
-aws s3api get-object-tagging --bucket my-bucket --key screenshot.png | jq &#39;.TagSet[] | select(.Key == &amp;quot;dev&amp;quot; and .Value == &amp;quot;true&amp;quot;)&#39; If condition, print parent element
-aws apigateway get-rest-apis --profile prod | jq &#39;.items[] | . as $item | select(.name == &amp;quot;My Secure API&amp;quot;) | $item&#39; If condition, print parent element with contains</description>
+aws apigateway get-rest-apis --profile prod | jq &amp;#39;.items[] | select(.name == &amp;#34;My Secure API&amp;#34;) | .id&amp;#39; -r Multiple if condition
+aws s3api get-object-tagging --bucket my-bucket --key screenshot.png | jq &amp;#39;.TagSet[] | select(.Key == &amp;#34;dev&amp;#34; and .Value == &amp;#34;true&amp;#34;)&amp;#39; If condition, print parent element
+aws apigateway get-rest-apis --profile prod | jq &amp;#39;.items[] | . as $item | select(.name == &amp;#34;My Secure API&amp;#34;) | $item&amp;#39; If condition, print parent element with contains</description>
     </item>
     
     <item>
@@ -112,8 +112,8 @@ aws apigateway get-rest-apis --profile prod | jq &#39;.items[] | . as $item | se
       
       <guid>https://karthikeayan.github.io/post/java-dynamic-heap-size/</guid>
       <description>Java Dynamic Heap Size Below statistics are tested on: amazoncorretto:8-alpine-jre
-Percentage values can be used to set Maximum Heap Size: java -XX:+HeapDumpOnOutOfMemoryError -XX:OnError=&#39;echo JVM exited with error&#39; \ -XX:MaxRAMPercentage=90.0 \ -XX:MinRAMPercentage=40.0 \ -XX:+PrintGCDetails -jar app.jar When using percentage java heap size is set as below,
-   Container Memory Heap Size     8G 6.40G   16G 12.80G   32G 25.60G   64G 26.67G   128G 26.</description>
+Percentage values can be used to set Maximum Heap Size: java -XX:+HeapDumpOnOutOfMemoryError -XX:OnError=&amp;#39;echo JVM exited with error&amp;#39; \ -XX:MaxRAMPercentage=90.0 \ -XX:MinRAMPercentage=40.0 \ -XX:+PrintGCDetails -jar app.jar When using percentage java heap size is set as below,
+Container Memory Heap Size 8G 6.40G 16G 12.80G 32G 25.60G 64G 26.67G 128G 26.67G So, JVM Heap Size doesn&amp;rsquo;t go beyond 26.67G when using XX:MaxRAMPercentage</description>
     </item>
     
     <item>
@@ -125,7 +125,7 @@ Percentage values can be used to set Maximum Heap Size: java -XX:+HeapDumpOnOutO
       <description>Terraform Access Denied Access Denied You are working with Terraform, AWS and S3 for Remote State and suddenly you see a message
 AccessDenied: Access Denied Terraform doesn&amp;rsquo;t give you lots of information, you are checking your IAM access, checking your Terraform provider and scratching your head what is going on.
 This is what I did.
- I ran &amp;ldquo;terraform apply&amp;rdquo; with provider pointing to Account A. Terraform created few resources in AWS and its corresponding state in S3 bucket.</description>
+I ran &amp;ldquo;terraform apply&amp;rdquo; with provider pointing to Account A. Terraform created few resources in AWS and its corresponding state in S3 bucket.</description>
     </item>
     
     <item>

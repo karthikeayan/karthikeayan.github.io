@@ -28,7 +28,7 @@ kubectl exec On March 2021, AWS launched a feature which is similar to &amp;ldqu
       <description>Terraform Access Denied Access Denied You are working with Terraform, AWS and S3 for Remote State and suddenly you see a message
 AccessDenied: Access Denied Terraform doesn&amp;rsquo;t give you lots of information, you are checking your IAM access, checking your Terraform provider and scratching your head what is going on.
 This is what I did.
- I ran &amp;ldquo;terraform apply&amp;rdquo; with provider pointing to Account A. Terraform created few resources in AWS and its corresponding state in S3 bucket.</description>
+I ran &amp;ldquo;terraform apply&amp;rdquo; with provider pointing to Account A. Terraform created few resources in AWS and its corresponding state in S3 bucket.</description>
     </item>
     
     <item>
