@@ -1,431 +1,432 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on </title>
-    <link>/tags/</link>
-    <description>Recent content in Tags on </description>
+    <title>Tags on Karthikeyan Sundararajan</title>
+    <link>https://karthikeayan.github.io/tags/</link>
+    <description>Recent content in Tags on Karthikeyan Sundararajan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 27 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Thu, 27 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://karthikeayan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>eks</title>
-      <link>/tags/eks/</link>
+      <link>https://karthikeayan.github.io/tags/eks/</link>
       <pubDate>Thu, 27 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>/tags/eks/</guid>
+      <guid>https://karthikeayan.github.io/tags/eks/</guid>
       <description></description>
     </item>
     
     <item>
       <title>filter</title>
-      <link>/tags/filter/</link>
+      <link>https://karthikeayan.github.io/tags/filter/</link>
       <pubDate>Thu, 27 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>/tags/filter/</guid>
+      <guid>https://karthikeayan.github.io/tags/filter/</guid>
       <description></description>
     </item>
     
     <item>
       <title>kubernetes</title>
-      <link>/tags/kubernetes/</link>
+      <link>https://karthikeayan.github.io/tags/kubernetes/</link>
       <pubDate>Thu, 27 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>/tags/kubernetes/</guid>
+      <guid>https://karthikeayan.github.io/tags/kubernetes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>logs</title>
-      <link>/tags/logs/</link>
+      <link>https://karthikeayan.github.io/tags/logs/</link>
       <pubDate>Thu, 27 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>/tags/logs/</guid>
+      <guid>https://karthikeayan.github.io/tags/logs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>query</title>
-      <link>/tags/query/</link>
+      <link>https://karthikeayan.github.io/tags/query/</link>
       <pubDate>Thu, 27 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>/tags/query/</guid>
+      <guid>https://karthikeayan.github.io/tags/query/</guid>
       <description></description>
     </item>
     
     <item>
       <title>api-resources</title>
-      <link>/tags/api-resources/</link>
+      <link>https://karthikeayan.github.io/tags/api-resources/</link>
       <pubDate>Fri, 21 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>/tags/api-resources/</guid>
+      <guid>https://karthikeayan.github.io/tags/api-resources/</guid>
       <description></description>
     </item>
     
     <item>
       <title>https</title>
-      <link>/tags/https/</link>
+      <link>https://karthikeayan.github.io/tags/https/</link>
       <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>/tags/https/</guid>
+      <guid>https://karthikeayan.github.io/tags/https/</guid>
       <description></description>
     </item>
     
     <item>
       <title>network</title>
-      <link>/tags/network/</link>
+      <link>https://karthikeayan.github.io/tags/network/</link>
       <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>/tags/network/</guid>
+      <guid>https://karthikeayan.github.io/tags/network/</guid>
       <description></description>
     </item>
     
     <item>
       <title>observability</title>
-      <link>/tags/observability/</link>
+      <link>https://karthikeayan.github.io/tags/observability/</link>
       <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>/tags/observability/</guid>
+      <guid>https://karthikeayan.github.io/tags/observability/</guid>
       <description></description>
     </item>
     
     <item>
       <title>packet</title>
-      <link>/tags/packet/</link>
+      <link>https://karthikeayan.github.io/tags/packet/</link>
       <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>/tags/packet/</guid>
+      <guid>https://karthikeayan.github.io/tags/packet/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tcpdump</title>
-      <link>/tags/tcpdump/</link>
+      <link>https://karthikeayan.github.io/tags/tcpdump/</link>
       <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>/tags/tcpdump/</guid>
+      <guid>https://karthikeayan.github.io/tags/tcpdump/</guid>
       <description></description>
     </item>
     
     <item>
       <title>blogs</title>
-      <link>/tags/blogs/</link>
+      <link>https://karthikeayan.github.io/tags/blogs/</link>
       <pubDate>Sun, 13 Feb 2022 00:00:00 +0000</pubDate>
       
-      <guid>/tags/blogs/</guid>
+      <guid>https://karthikeayan.github.io/tags/blogs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tech</title>
-      <link>/tags/tech/</link>
+      <link>https://karthikeayan.github.io/tags/tech/</link>
       <pubDate>Sun, 13 Feb 2022 00:00:00 +0000</pubDate>
       
-      <guid>/tags/tech/</guid>
+      <guid>https://karthikeayan.github.io/tags/tech/</guid>
       <description></description>
     </item>
     
     <item>
       <title>playground</title>
-      <link>/tags/playground/</link>
+      <link>https://karthikeayan.github.io/tags/playground/</link>
       <pubDate>Sat, 12 Feb 2022 00:00:00 +0000</pubDate>
       
-      <guid>/tags/playground/</guid>
+      <guid>https://karthikeayan.github.io/tags/playground/</guid>
       <description></description>
     </item>
     
     <item>
       <title>practice</title>
-      <link>/tags/practice/</link>
+      <link>https://karthikeayan.github.io/tags/practice/</link>
       <pubDate>Sat, 12 Feb 2022 00:00:00 +0000</pubDate>
       
-      <guid>/tags/practice/</guid>
+      <guid>https://karthikeayan.github.io/tags/practice/</guid>
       <description></description>
     </item>
     
     <item>
       <title>sandbox</title>
-      <link>/tags/sandbox/</link>
+      <link>https://karthikeayan.github.io/tags/sandbox/</link>
       <pubDate>Sat, 12 Feb 2022 00:00:00 +0000</pubDate>
       
-      <guid>/tags/sandbox/</guid>
+      <guid>https://karthikeayan.github.io/tags/sandbox/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ad</title>
-      <link>/tags/ad/</link>
+      <link>https://karthikeayan.github.io/tags/ad/</link>
       <pubDate>Fri, 24 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/ad/</guid>
+      <guid>https://karthikeayan.github.io/tags/ad/</guid>
       <description></description>
     </item>
     
     <item>
       <title>azure</title>
-      <link>/tags/azure/</link>
+      <link>https://karthikeayan.github.io/tags/azure/</link>
       <pubDate>Fri, 24 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/azure/</guid>
+      <guid>https://karthikeayan.github.io/tags/azure/</guid>
       <description></description>
     </item>
     
     <item>
       <title>cli</title>
-      <link>/tags/cli/</link>
+      <link>https://karthikeayan.github.io/tags/cli/</link>
       <pubDate>Fri, 24 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/cli/</guid>
+      <guid>https://karthikeayan.github.io/tags/cli/</guid>
       <description></description>
     </item>
     
     <item>
       <title>list</title>
-      <link>/tags/list/</link>
+      <link>https://karthikeayan.github.io/tags/list/</link>
       <pubDate>Fri, 24 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/list/</guid>
+      <guid>https://karthikeayan.github.io/tags/list/</guid>
       <description></description>
     </item>
     
     <item>
       <title>microsoft</title>
-      <link>/tags/microsoft/</link>
+      <link>https://karthikeayan.github.io/tags/microsoft/</link>
       <pubDate>Fri, 24 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/microsoft/</guid>
+      <guid>https://karthikeayan.github.io/tags/microsoft/</guid>
       <description></description>
     </item>
     
     <item>
       <title>users</title>
-      <link>/tags/users/</link>
+      <link>https://karthikeayan.github.io/tags/users/</link>
       <pubDate>Fri, 24 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/users/</guid>
+      <guid>https://karthikeayan.github.io/tags/users/</guid>
       <description></description>
     </item>
     
     <item>
       <title>aws</title>
-      <link>/tags/aws/</link>
+      <link>https://karthikeayan.github.io/tags/aws/</link>
       <pubDate>Sun, 12 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/aws/</guid>
+      <guid>https://karthikeayan.github.io/tags/aws/</guid>
       <description></description>
     </item>
     
     <item>
       <title>bash</title>
-      <link>/tags/bash/</link>
+      <link>https://karthikeayan.github.io/tags/bash/</link>
       <pubDate>Sun, 12 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/bash/</guid>
+      <guid>https://karthikeayan.github.io/tags/bash/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ecs</title>
-      <link>/tags/ecs/</link>
+      <link>https://karthikeayan.github.io/tags/ecs/</link>
       <pubDate>Sun, 12 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/ecs/</guid>
+      <guid>https://karthikeayan.github.io/tags/ecs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>sh</title>
-      <link>/tags/sh/</link>
+      <link>https://karthikeayan.github.io/tags/sh/</link>
       <pubDate>Sun, 12 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/sh/</guid>
+      <guid>https://karthikeayan.github.io/tags/sh/</guid>
       <description></description>
     </item>
     
     <item>
       <title>shell</title>
-      <link>/tags/shell/</link>
+      <link>https://karthikeayan.github.io/tags/shell/</link>
       <pubDate>Sun, 12 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/shell/</guid>
+      <guid>https://karthikeayan.github.io/tags/shell/</guid>
       <description></description>
     </item>
     
     <item>
       <title>alternate</title>
-      <link>/tags/alternate/</link>
+      <link>https://karthikeayan.github.io/tags/alternate/</link>
       <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/alternate/</guid>
+      <guid>https://karthikeayan.github.io/tags/alternate/</guid>
       <description></description>
     </item>
     
     <item>
       <title>docker</title>
-      <link>/tags/docker/</link>
+      <link>https://karthikeayan.github.io/tags/docker/</link>
       <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/docker/</guid>
+      <guid>https://karthikeayan.github.io/tags/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>free</title>
-      <link>/tags/free/</link>
+      <link>https://karthikeayan.github.io/tags/free/</link>
       <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/free/</guid>
+      <guid>https://karthikeayan.github.io/tags/free/</guid>
       <description></description>
     </item>
     
     <item>
       <title>lima</title>
-      <link>/tags/lima/</link>
+      <link>https://karthikeayan.github.io/tags/lima/</link>
       <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/lima/</guid>
+      <guid>https://karthikeayan.github.io/tags/lima/</guid>
       <description></description>
     </item>
     
     <item>
       <title>macos</title>
-      <link>/tags/macos/</link>
+      <link>https://karthikeayan.github.io/tags/macos/</link>
       <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/macos/</guid>
+      <guid>https://karthikeayan.github.io/tags/macos/</guid>
       <description></description>
     </item>
     
     <item>
       <title>nerdctl</title>
-      <link>/tags/nerdctl/</link>
+      <link>https://karthikeayan.github.io/tags/nerdctl/</link>
       <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/nerdctl/</guid>
+      <guid>https://karthikeayan.github.io/tags/nerdctl/</guid>
       <description></description>
     </item>
     
     <item>
       <title>opensource</title>
-      <link>/tags/opensource/</link>
+      <link>https://karthikeayan.github.io/tags/opensource/</link>
       <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/opensource/</guid>
+      <guid>https://karthikeayan.github.io/tags/opensource/</guid>
       <description></description>
     </item>
     
     <item>
       <title>cheatsheet</title>
-      <link>/tags/cheatsheet/</link>
+      <link>https://karthikeayan.github.io/tags/cheatsheet/</link>
       <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/cheatsheet/</guid>
+      <guid>https://karthikeayan.github.io/tags/cheatsheet/</guid>
       <description></description>
     </item>
     
     <item>
       <title>jq</title>
-      <link>/tags/jq/</link>
+      <link>https://karthikeayan.github.io/tags/jq/</link>
       <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/jq/</guid>
+      <guid>https://karthikeayan.github.io/tags/jq/</guid>
       <description></description>
     </item>
     
     <item>
       <title>json</title>
-      <link>/tags/json/</link>
+      <link>https://karthikeayan.github.io/tags/json/</link>
       <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/json/</guid>
+      <guid>https://karthikeayan.github.io/tags/json/</guid>
       <description></description>
     </item>
     
     <item>
       <title>dynamic</title>
-      <link>/tags/dynamic/</link>
+      <link>https://karthikeayan.github.io/tags/dynamic/</link>
       <pubDate>Mon, 31 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/dynamic/</guid>
+      <guid>https://karthikeayan.github.io/tags/dynamic/</guid>
       <description></description>
     </item>
     
     <item>
       <title>heap</title>
-      <link>/tags/heap/</link>
+      <link>https://karthikeayan.github.io/tags/heap/</link>
       <pubDate>Mon, 31 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/heap/</guid>
+      <guid>https://karthikeayan.github.io/tags/heap/</guid>
       <description></description>
     </item>
     
     <item>
       <title>java</title>
-      <link>/tags/java/</link>
+      <link>https://karthikeayan.github.io/tags/java/</link>
       <pubDate>Mon, 31 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/java/</guid>
+      <guid>https://karthikeayan.github.io/tags/java/</guid>
       <description></description>
     </item>
     
     <item>
       <title>memory</title>
-      <link>/tags/memory/</link>
+      <link>https://karthikeayan.github.io/tags/memory/</link>
       <pubDate>Mon, 31 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/memory/</guid>
+      <guid>https://karthikeayan.github.io/tags/memory/</guid>
       <description></description>
     </item>
     
     <item>
       <title>oom</title>
-      <link>/tags/oom/</link>
+      <link>https://karthikeayan.github.io/tags/oom/</link>
       <pubDate>Mon, 31 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/oom/</guid>
+      <guid>https://karthikeayan.github.io/tags/oom/</guid>
       <description></description>
     </item>
     
     <item>
       <title>s3</title>
-      <link>/tags/s3/</link>
+      <link>https://karthikeayan.github.io/tags/s3/</link>
       <pubDate>Thu, 21 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/s3/</guid>
+      <guid>https://karthikeayan.github.io/tags/s3/</guid>
       <description></description>
     </item>
     
     <item>
       <title>state</title>
-      <link>/tags/state/</link>
+      <link>https://karthikeayan.github.io/tags/state/</link>
       <pubDate>Thu, 21 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/state/</guid>
+      <guid>https://karthikeayan.github.io/tags/state/</guid>
       <description></description>
     </item>
     
     <item>
       <title>terraform</title>
-      <link>/tags/terraform/</link>
+      <link>https://karthikeayan.github.io/tags/terraform/</link>
       <pubDate>Thu, 21 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/terraform/</guid>
+      <guid>https://karthikeayan.github.io/tags/terraform/</guid>
       <description></description>
     </item>
     
     <item>
       <title>firelens</title>
-      <link>/tags/firelens/</link>
+      <link>https://karthikeayan.github.io/tags/firelens/</link>
       <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/firelens/</guid>
+      <guid>https://karthikeayan.github.io/tags/firelens/</guid>
       <description></description>
     </item>
     
     <item>
       <title>home</title>
-      <link>/tags/home/</link>
+      <link>https://karthikeayan.github.io/tags/home/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/tags/home/</guid>
+      <guid>https://karthikeayan.github.io/tags/home/</guid>
       <description></description>
     </item>
     
