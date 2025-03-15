@@ -63,7 +63,7 @@
   />
 
   
-  <title>Posts - Karthikeyan Sundararajan</title>
+  <title>flowise-openwebui-ollama-docker-compose - Karthikeyan Sundararajan</title>
 
   
   <meta name="theme-color" />
@@ -72,11 +72,8 @@
   
   
   
-  
-  <meta
-    name="description"
-    content="A personal blog"
-  />
+  <meta name="description" content="Docker Compose for Flowise OpenWebUI Ollama Create .env file as below,
+FLOWISE_USERNAME:admin FLOWISSE_PASSWORD:admin services: flowise: image: flowiseai/flowise restart: always environment: - PORT=3001 - FLOWISE_USERNAME=${FLOWISE_USERNAME} - FLOWISE_PASSWORD=${FLOWISE_PASSWORD} ports: - &#34;3001:3001&#34; volumes: - ./.flowise:/root/.flowise entrypoint: /bin/sh -c &#34;sleep 3; flowise start&#34; openWebUI: image: ghcr.io/open-webui/open-webui:main restart: always ports: - &#34;3000:8080&#34; environment: - OLLAMA_API_BASE_URL=http://ollama:11434 extra_hosts: - &#34;host.docker.internal:host-gateway&#34; volumes: - ./open-webui-local:/app/backend/data depends_on: - ollama ollama: image: ollama/ollama environment: - &#39;OLLAMA_HOST=0.0.0.0&#39; - &#39;OLLAMA_PORT=11434&#39; ports: - &#34;11434:11434&#34; volumes: - ." />
   <meta name="author" content="Karthikeyan Sundararajan" />
   
 
@@ -185,31 +182,29 @@
   
   
   
-  <meta itemprop="name" content="Posts">
-<meta itemprop="description" content="">
+  <meta itemprop="name" content="flowise-openwebui-ollama-docker-compose">
+<meta itemprop="description" content="Docker Compose for Flowise OpenWebUI Ollama">
+
+<meta itemprop="wordCount" content="73">
+<meta itemprop="keywords" content="ai,docker-compose,flowise,ollama,openwebui,local,localai," />
   
-  <meta property="og:title" content="Posts" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://karthikeayan.github.io/post/" />
+  <meta property="og:title" content="flowise-openwebui-ollama-docker-compose" />
+<meta property="og:description" content="Docker Compose for Flowise OpenWebUI Ollama" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://karthikeayan.github.io/post/flowise-openwebui-ollama-docker-compose/" /><meta property="article:section" content="post" />
+
+
 
   
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="flowise-openwebui-ollama-docker-compose"/>
+<meta name="twitter:description" content="Docker Compose for Flowise OpenWebUI Ollama"/>
 
   
   
-  <link
-    rel="alternate"
-    type="application/rss&#43;xml"
-    href="https://karthikeayan.github.io/post/index.xml"
-    title="Karthikeyan Sundararajan"
-  />
-  
 
   
-  <link rel="canonical" href="https://karthikeayan.github.io/post/" />
+  <link rel="canonical" href="https://karthikeayan.github.io/post/flowise-openwebui-ollama-docker-compose/" />
   
   
 </head>
@@ -370,64 +365,183 @@
     >
       
 
+<article>
+  <header class="mb-14">
+    <h1 class="!my-0 pb-2.5">flowise-openwebui-ollama-docker-compose</h1>
 
+    
+    <div class="text-xs antialiased opacity-60">
+      
+      
+      
+      
+    </div>
+    
+  </header>
 
+  <section><h1 id="docker-compose-for-flowise-openwebui-ollama">Docker Compose for Flowise OpenWebUI Ollama</h1>
+<p>Create .env file as below,</p>
+<pre tabindex="0"><code>FLOWISE_USERNAME:admin
+FLOWISSE_PASSWORD:admin
+</code></pre><pre tabindex="0"><code>services:
+  flowise:
+    image: flowiseai/flowise
+    restart: always
+    environment:
+      - PORT=3001
+      - FLOWISE_USERNAME=${FLOWISE_USERNAME}
+      - FLOWISE_PASSWORD=${FLOWISE_PASSWORD}
+    ports:
+      - &#34;3001:3001&#34;
+    volumes:
+      - ./.flowise:/root/.flowise
+    entrypoint: /bin/sh -c &#34;sleep 3; flowise start&#34;
 
+  openWebUI:
+    image: ghcr.io/open-webui/open-webui:main
+    restart: always
+    ports:
+      - &#34;3000:8080&#34;
+    environment:
+      - OLLAMA_API_BASE_URL=http://ollama:11434
+    extra_hosts:
+      - &#34;host.docker.internal:host-gateway&#34;
+    volumes:
+      - ./open-webui-local:/app/backend/data
+    depends_on:
+      - ollama
 
+  ollama:
+    image: ollama/ollama
+    environment:
+      - &#39;OLLAMA_HOST=0.0.0.0&#39;
+      - &#39;OLLAMA_PORT=11434&#39;
+    ports:
+      - &#34;11434:11434&#34;
+    volumes:
+      - ./ollama-local:/root/.ollama
+</code></pre></section>
 
-
-
-
- 
-
-
-
-
-<section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
   
-  <h2 class="!my-0">terraform-access-denied-access-denied</h2>
-  <time class="text-xs antialiased opacity-60"
-    >Jan 21, 2021</time
-  >
-  <a class="absolute inset-0 text-[0]" href="https://karthikeayan.github.io/post/terraform-access-denied/">terraform-access-denied-access-denied</a>
-</section>
-
-
-
-
-
-<section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
   
-  <h2 class="!my-0">aws-firelens-overview</h2>
-  <time class="text-xs antialiased opacity-60"
-    >Jun 22, 2020</time
-  >
-  <a class="absolute inset-0 text-[0]" href="https://karthikeayan.github.io/post/aws-firelens-overview/">aws-firelens-overview</a>
-</section>
-
-
-
-
-
-<section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
+  <footer class="mt-12 flex flex-wrap">
+     
+    <a
+      class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="https://karthikeayan.github.io/tags/ai"
+      >ai</a
+    >
+     
+    <a
+      class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="https://karthikeayan.github.io/tags/docker-compose"
+      >docker-compose</a
+    >
+     
+    <a
+      class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="https://karthikeayan.github.io/tags/flowise"
+      >flowise</a
+    >
+     
+    <a
+      class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="https://karthikeayan.github.io/tags/ollama"
+      >ollama</a
+    >
+     
+    <a
+      class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="https://karthikeayan.github.io/tags/openwebui"
+      >openwebui</a
+    >
+     
+    <a
+      class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="https://karthikeayan.github.io/tags/local"
+      >local</a
+    >
+     
+    <a
+      class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="https://karthikeayan.github.io/tags/localai"
+      >localai</a
+    >
+    
+  </footer>
   
-  <h2 class="!my-0">flowise-openwebui-ollama-docker-compose</h2>
-  <time class="text-xs antialiased opacity-60"
-    >Jan 1, 1</time
-  >
-  <a class="absolute inset-0 text-[0]" href="https://karthikeayan.github.io/post/flowise-openwebui-ollama-docker-compose/">flowise-openwebui-ollama-docker-compose</a>
-</section>
 
-
-
-
-<nav class="mt-14 flex">
-  
-  <a class="btn" href="/post/">← Prev Page</a>
   
   
-</nav>
 
+  
+  
+  <div class="mt-24" id="disqus_thread"></div>
+  <script>
+    const disqusShortname = 'YOUR_DISQUS_SHORTNAME';
+    const script = document.createElement('script');
+    script.src = 'https://' + disqusShortname + '.disqus.com/embed.js';
+    script.setAttribute('data-timestamp', +new Date());
+    document.head.appendChild(script);
+  </script>
+  
+
+  
+  
+  <div class="mt-24" id="graphcomment"></div>
+  <script type="text/javascript">
+    var __semio__params = {
+      graphcommentId: 'YOUR_GRAPH_COMMENT_ID',
+      behaviour: {
+        
+      },
+      
+    };
+
+    function __semio__onload() {
+      __semio__gc_graphlogin(__semio__params);
+    }
+
+    (function () {
+      var gc = document.createElement('script');
+      gc.type = 'text/javascript';
+      gc.async = true;
+      gc.onload = __semio__onload;
+      gc.defer = true;
+      gc.src =
+        'https://integration.graphcomment.com/gc_graphlogin.js?' + Date.now();
+      (
+        document.getElementsByTagName('head')[0] ||
+        document.getElementsByTagName('body')[0]
+      ).appendChild(gc);
+    })();
+  </script>
+  
+
+  
+
+
+  
+  <div class="giscus mt-24"></div>
+  <script
+    src="https://giscus.app/client.js"
+    data-repo="YOUR_GISCUS_REPO"
+    data-repo-id="YOUR_GISCUS_REPO_ID"
+    data-category="YOUR__GISCUS_CATEGORY"
+    data-category-id="YOUR_GISCUS_CATEGORY_ID"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="0"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="zh-CN"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async
+  ></script>
+  
+</article>
 
 
     </main>
