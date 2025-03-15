@@ -2,6 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://karthikeayan.github.io/tags/ai/</loc>
+    <lastmod>2025-03-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://karthikeayan.github.io/tags/docker-compose/</loc>
+    <lastmod>2025-03-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://karthikeayan.github.io/tags/flowise/</loc>
+    <lastmod>2025-03-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://karthikeayan.github.io/post/flowise-openwebui-ollama-docker-compose/</loc>
+    <lastmod>2025-03-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://karthikeayan.github.io/</loc>
+    <lastmod>2025-03-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://karthikeayan.github.io/tags/local/</loc>
+    <lastmod>2025-03-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://karthikeayan.github.io/tags/localai/</loc>
+    <lastmod>2025-03-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://karthikeayan.github.io/tags/ollama/</loc>
+    <lastmod>2025-03-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://karthikeayan.github.io/tags/openwebui/</loc>
+    <lastmod>2025-03-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://karthikeayan.github.io/post/</loc>
+    <lastmod>2025-03-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://karthikeayan.github.io/tags/</loc>
+    <lastmod>2025-03-14T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://karthikeayan.github.io/post/aws-cloudwatch-k8s-api-log-filter/</loc>
     <lastmod>2023-07-27T00:00:00+00:00</lastmod>
   </url><url>
@@ -11,22 +44,13 @@
     <loc>https://karthikeayan.github.io/tags/filter/</loc>
     <lastmod>2023-07-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://karthikeayan.github.io/</loc>
-    <lastmod>2023-07-27T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://karthikeayan.github.io/tags/kubernetes/</loc>
     <lastmod>2023-07-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://karthikeayan.github.io/tags/logs/</loc>
     <lastmod>2023-07-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://karthikeayan.github.io/post/</loc>
-    <lastmod>2023-07-27T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://karthikeayan.github.io/tags/query/</loc>
-    <lastmod>2023-07-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://karthikeayan.github.io/tags/</loc>
     <lastmod>2023-07-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://karthikeayan.github.io/tags/api-resources/</loc>
@@ -187,24 +211,8 @@
   </url><url>
     <loc>https://karthikeayan.github.io/about/</loc>
   </url><url>
-    <loc>https://karthikeayan.github.io/tags/ai/</loc>
-  </url><url>
     <loc>https://karthikeayan.github.io/categories/</loc>
   </url><url>
-    <loc>https://karthikeayan.github.io/tags/docker-compose/</loc>
-  </url><url>
-    <loc>https://karthikeayan.github.io/tags/flowise/</loc>
-  </url><url>
-    <loc>https://karthikeayan.github.io/post/flowise-openwebui-ollama-docker-compose/</loc>
-  </url><url>
     <loc>https://karthikeayan.github.io/tags/home/</loc>
-  </url><url>
-    <loc>https://karthikeayan.github.io/tags/local/</loc>
-  </url><url>
-    <loc>https://karthikeayan.github.io/tags/localai/</loc>
-  </url><url>
-    <loc>https://karthikeayan.github.io/tags/ollama/</loc>
-  </url><url>
-    <loc>https://karthikeayan.github.io/tags/openwebui/</loc>
   </url>
 </urlset>
