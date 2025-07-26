@@ -18,5 +18,16 @@ Our Docker Subscription Service Agreement includes a change to the terms for Doc
 Many of us using Docker Desktop in day to day activities are part of large businesses.</description>
     </item>
     
+    <item>
+      <title>nerdctl-docker-alternate</title>
+      <link>https://karthikeayan.github.io/posts/lima-docker-alternate/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://karthikeayan.github.io/posts/lima-docker-alternate/</guid>
+      <description>Nerdctl, Docker Alternate Using Docker in local desktop is not free anymore for large businesses,
+Our Docker Subscription Service Agreement includes a change to the terms for Docker Desktop It remains free for small businesses (fewer than 250 employees AND less than $10 million in annual revenue), personal use, education, and non-commercial open source projects. Extracted from, https://www.docker.com/products/docker-desktop
+Many of us using Docker Desktop in day to day activities are part of large businesses.</description>
+    </item>
+    
   </channel>
 </rss>

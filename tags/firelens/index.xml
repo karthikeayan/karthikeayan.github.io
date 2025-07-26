@@ -17,5 +17,15 @@
 What does that mean? If you have applications running in AWS using AWS ECS, AWS Firelens will help in sending those application logs to different places like Elasticsearch, Cloudwatch, Firehose etc.,</description>
     </item>
     
+    <item>
+      <title>aws-firelens-overview</title>
+      <link>https://karthikeayan.github.io/posts/aws-firelens-overview/</link>
+      <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://karthikeayan.github.io/posts/aws-firelens-overview/</guid>
+      <description>AWS Firelens Overview What is AWS Firelens? Wrapper on top of fluentbit to make fluentbit work seamlessly with AWS services.
+What does that mean? If you have applications running in AWS using AWS ECS, AWS Firelens will help in sending those application logs to different places like Elasticsearch, Cloudwatch, Firehose etc.,</description>
+    </item>
+    
   </channel>
 </rss>
