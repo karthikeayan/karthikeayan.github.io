@@ -1,388 +1,211 @@
-<!doctype html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<html
-  class="not-ready lg:text-base"
-  style="--bg: #fbfbfb"
-  lang="en-us"
-  dir="ltr"
->
-  <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, shrink-to-fit=no"
-  />
-
-  
-  <title>nerdctl-docker-alternate - Karthikeyan Sundararajan</title>
-
-  
-  <meta name="theme-color" />
-
-  
-  
-  
-  
-  <meta name="description" content="Nerdctl, Docker Alternate Using Docker in local desktop is not free anymore for large businesses,
-Our Docker Subscription Service Agreement includes a change to the terms for Docker Desktop It remains free for small businesses (fewer than 250 employees AND less than $10 million in annual revenue), personal use, education, and non-commercial open source projects. Extracted from, https://www.docker.com/products/docker-desktop
-Many of us using Docker Desktop in day to day activities are part of large businesses." />
-  <meta name="author" content="Karthikeyan Sundararajan" />
-  
-
-  
-  
-  
-  
-  
-  
-  <link rel="preload stylesheet" as="style" href="https://karthikeayan.github.io/main.min.css" />
-
-  
-  
-  
-  
-  
-  <link rel="preload" as="image" href="https://karthikeayan.github.io/theme.svg" />
-
-  
-  
-  
-  
-  <link rel="preload" as="image" href="https://avatars.githubusercontent.com/u/5030782?v=4&amp;size=64" />
-  
-  
-
-  
-  
-  <link rel="preload" as="image" href="https://karthikeayan.github.io/twitter.svg" />
-  
-  <link rel="preload" as="image" href="https://karthikeayan.github.io/github.svg" />
-  
-  <link rel="preload" as="image" href="https://karthikeayan.github.io/instagram.svg" />
-  
-  <link rel="preload" as="image" href="https://karthikeayan.github.io/linkedin.svg" />
-  
-  <link rel="preload" as="image" href="https://karthikeayan.github.io/mastodon.svg" />
-  
-  <link rel="preload" as="image" href="https://karthikeayan.github.io/threads.svg" />
-  
-  <link rel="preload" as="image" href="https://karthikeayan.github.io/rss.svg" />
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css"
-  integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI"
-  crossorigin="anonymous"
-/>
-<script
-  defer
-  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"
-  integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t"
-  crossorigin="anonymous"
-></script>
-<script
-  defer
-  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"
-  integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
-  crossorigin="anonymous"
-></script>
-
-
-<script>
-  document.addEventListener('DOMContentLoaded', () =>
-    renderMathInElement(document.body, {
-      
-      
-      delimiters: [
-        { left: '$$', right: '$$', display: true },
-        { left: '$', right: '$', display: false },
-      ],
-      
-      throwOnError: false,
-    }),
-  );
-</script>
-
-  
-  
-  
-
-  
-  <link
-    rel="icon"
-    href="https://karthikeayan.github.io/favicon.ico"
-  />
-  <link
-    rel="apple-touch-icon"
-    href="https://karthikeayan.github.io/apple-touch-icon.png"
-  />
-
-  
-  <meta name="generator" content="Hugo 0.119.0">
-
-  
-  
-  
-  
-  
-  <meta itemprop="name" content="nerdctl-docker-alternate">
-<meta itemprop="description" content="Nerdctl, Docker Alternate"><meta itemprop="datePublished" content="2021-11-13T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-11-13T00:00:00+00:00" />
-<meta itemprop="wordCount" content="264">
-<meta itemprop="keywords" content="docker,alternate,opensource,free,macos,lima,nerdctl," />
-  
-  <meta property="og:title" content="nerdctl-docker-alternate" />
-<meta property="og:description" content="Nerdctl, Docker Alternate" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://karthikeayan.github.io/post/lima-docker-alternate/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-11-13T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-11-13T00:00:00+00:00" />
-
-  
-  <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="nerdctl-docker-alternate"/>
-<meta name="twitter:description" content="Nerdctl, Docker Alternate"/>
-
-  
-  
-
-  
-  <link rel="canonical" href="https://karthikeayan.github.io/post/lima-docker-alternate/" />
-  
-  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>nerdctl-docker-alternate | Karthikeyan Sundararajan</title>
+    
+    
+    
+    <meta name="description" content="Nerdctl, Docker Alternate">
+    
+    
+    
+    <meta property="og:title" content="nerdctl-docker-alternate | Karthikeyan Sundararajan">
+    <meta property="og:description" content="Nerdctl, Docker Alternate">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://karthikeayan.github.io/post/lima-docker-alternate/">
+    
+    
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="nerdctl-docker-alternate | Karthikeyan Sundararajan">
+    <meta name="twitter:description" content="Nerdctl, Docker Alternate">
+    
+    
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    
+    
+    <link rel="stylesheet" href="https://karthikeayan.github.io/css/main.min.f3239320356012e75e56b485acbe843df5e30ad1394d6abfc4a43aa4d51478f0.css">
+    
+    
+    
+    
+    
 </head>
-
-  <body class="text-black duration-200 ease-out dark:text-white">
-    <header class="mx-auto flex h-[4.5rem] max-w-[--w] px-8 lg:justify-center">
-  <div class="relative z-50 ltr:mr-auto rtl:ml-auto flex items-center">
-    <a class="-translate-y-[1px] text-2xl font-medium" href="https://karthikeayan.github.io/"
-      >Karthikeyan Sundararajan</a
-    >
-    <div
-      class="btn-dark text-[0] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]"
-      role="button"
-      aria-label="Dark"
-    ></div>
-  </div>
-
-  <div
-    class="btn-menu relative z-50 ltr:-mr-8 rtl:-ml-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
-    role="button"
-    aria-label="Menu"
-  ></div>
-
-  
-
-  <script>
-    
-    const htmlClass = document.documentElement.classList;
-    setTimeout(() => {
-      htmlClass.remove('not-ready');
-    }, 10);
-
-    
-    const btnMenu = document.querySelector('.btn-menu');
-    btnMenu.addEventListener('click', () => {
-      htmlClass.toggle('open');
-    });
-
-    
-    const metaTheme = document.querySelector('meta[name="theme-color"]');
-    const lightBg = '#fbfbfb'.replace(/"/g, '');
-    const setDark = (isDark) => {
-      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
-      htmlClass[isDark ? 'add' : 'remove']('dark');
-      localStorage.setItem('dark', isDark);
-    };
-
-    
-    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    if (htmlClass.contains('dark')) {
-      setDark(true);
-    } else {
-      const darkVal = localStorage.getItem('dark');
-      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
-    }
-
-    
-    darkScheme.addEventListener('change', (event) => {
-      setDark(event.matches);
-    });
-
-    
-    const btnDark = document.querySelector('.btn-dark');
-    btnDark.addEventListener('click', () => {
-      setDark(localStorage.getItem('dark') !== 'true');
-    });
-  </script>
-
-  <div
-    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
-  >
+<body>
     
     
-
-    
-    <nav
-      class="mt-12 flex justify-center space-x-10 rtl:space-x-reverse dark:invert ltr:lg:ml-14 rtl:lg:mr-14 lg:mt-0 lg:items-center"
-    >
-      
-      <a
-        class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./twitter.svg)"
-        href="https://twitter.com/karthikeayan"
-        target="_blank"
-        rel="me"
-      >
-        twitter
-      </a>
-      
-      <a
-        class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./github.svg)"
-        href="https://github.com/karthikeayan"
-        target="_blank"
-        rel="me"
-      >
-        github
-      </a>
-      
-      <a
-        class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./instagram.svg)"
-        href="https://instagram.com/YOUR_INSTAGRAM_ID"
-        target="_blank"
-        rel="me"
-      >
-        instagram
-      </a>
-      
-      <a
-        class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./linkedin.svg)"
-        href="https://linkedin.com/in/karthikeyan-sundararajan/"
-        target="_blank"
-        rel="me"
-      >
-        linkedin
-      </a>
-      
-      <a
-        class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./mastodon.svg)"
-        href="YOUR_MASTODON_LINK"
-        target="_blank"
-        rel="me"
-      >
-        mastodon
-      </a>
-      
-      <a
-        class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./threads.svg)"
-        href="https://threads.net/@YOUR_THREADS_ID"
-        target="_blank"
-        rel="me"
-      >
-        threads
-      </a>
-      
-      <a
-        class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./rss.svg)"
-        href="https://karthikeayan.github.io/index.xml"
-        target="_blank"
-        rel="alternate"
-      >
-        rss
-      </a>
-      
-    </nav>
-    
-  </div>
-</header>
-
-
-    <main
-      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
-    >
-      
-
-<article>
-  <header class="mb-14">
-    <h1 class="!my-0 pb-2.5">nerdctl-docker-alternate</h1>
-
-    
-    <div class="text-xs antialiased opacity-60">
-      
-      <time>Nov 13, 2021</time>
-      
-      
-      
-      
+    <div class="browser-chrome">
+        <div class="toolbar">
+            <span class="toolbar-button">Back</span>
+            <span class="toolbar-button">Forward</span>
+            <span class="toolbar-button">Refresh</span>
+            <span class="toolbar-button">Home</span>
+        </div>
+        <div class="address-bar">
+            
+            https://karthikeayan.github.io/post/lima-docker-alternate/
+            
+        </div>
     </div>
     
-  </header>
+    
+    <div class="container">
+        
+        <nav class="site-nav">
+    <ul class="nav-menu">
 
-  <section><h1 id="nerdctl-docker-alternate">Nerdctl, Docker Alternate</h1>
+        
+        
+            
+            <li class="nav-item">
+                <a href="https://karthikeayan.github.io/" class="nav-link">
+                    Home
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a href="https://karthikeayan.github.io/posts/" class="nav-link">
+                    Posts
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a href="https://karthikeayan.github.io/about/" class="nav-link">
+                    About
+                </a>
+            </li>
+            
+
+            
+            
+            
+            <li class="nav-item">
+                <a href="https://karthikeayan.github.io/categories/" class="nav-link">📂 Categories</a>
+            </li>
+            
+
+            
+            
+            <li class="nav-item">
+                <a href="https://karthikeayan.github.io/tags/" class="nav-link">🏷️ Tags</a>
+            </li>
+            
+
+        
+
+        
+        
+        <li class="nav-item">
+            <a href="https://karthikeayan.github.io/index.xml" class="nav-link">📡 RSS</a>
+        </li>
+        
+    </ul>
+</nav>
+
+        
+        
+        <header class="site-header">
+            <div class="window">
+                <div class="window-header">
+                    <span class="window-title">Karthikeyan Sundararajan</span>
+                    <div class="window-controls">
+                        <span class="window-button">_</span>
+                        <span class="window-button">□</span>
+                        <span class="window-button">×</span>
+                    </div>
+                </div>
+                <div class="window-content">
+                    <a href="https://karthikeayan.github.io/" class="site-title">Karthikeyan Sundararajan</a>
+                    
+                </div>
+            </div>
+        </header>
+        
+        
+        <main class="main-content">
+            
+<article class="window">
+    <div class="window-header">
+        <span class="window-title">nerdctl-docker-alternate</span>
+        <div class="window-controls">
+            <span class="window-button">_</span>
+            <span class="window-button">□</span>
+            <span class="window-button">×</span>
+        </div>
+    </div>
+    <div class="window-content">
+        <header class="content-header">
+            <h1 class="post-title">nerdctl-docker-alternate</h1>
+            
+            
+            <div class="post-meta">
+                <span class="post-meta-item">
+                    📅 Published: Saturday, November 13, 2021
+                </span>
+                
+                <span class="post-meta-item">
+                    📖 2 min read
+                </span>
+                <span class="post-meta-item">
+                    📊 264 words
+                </span>
+                
+                
+                
+                
+                
+                
+                <span class="post-meta-item">
+                    🏷️ Tags: 
+                    
+                        
+                        <a href="/tags/docker">docker</a>
+                    
+                        , 
+                        <a href="/tags/alternate">alternate</a>
+                    
+                        , 
+                        <a href="/tags/opensource">opensource</a>
+                    
+                        , 
+                        <a href="/tags/free">free</a>
+                    
+                        , 
+                        <a href="/tags/macos">macos</a>
+                    
+                        , 
+                        <a href="/tags/lima">lima</a>
+                    
+                        , 
+                        <a href="/tags/nerdctl">nerdctl</a>
+                    
+                </span>
+                
+                
+                
+            </div>
+            
+            
+            
+            <div class="post-description" style="font-style: italic; margin: 8px 0; padding: 4px 8px; background: var(--bg-secondary); border: 1px inset var(--border-dark);">
+                Nerdctl, Docker Alternate
+            </div>
+            
+            
+            
+        </header>
+        
+        
+        
+        
+        
+        <div class="content">
+            <h1 id="nerdctl-docker-alternate">Nerdctl, Docker Alternate</h1>
 <p>Using Docker in local desktop is not free anymore for large businesses,</p>
 <pre tabindex="0"><code>Our Docker Subscription Service Agreement includes a change to the terms for Docker Desktop
 It remains free for small businesses (fewer than 250 employees AND less than $10 million in annual revenue), personal use, education, and non-commercial open source projects.
@@ -416,152 +239,453 @@ limactl start
 <pre tabindex="0"><code>lima nerdctl run -d --name nginx -p 127.0.0.1:8080:80 nginx:alpine
 </code></pre><p>Till I get used to the new command, I thought, I will use an alias in my ~/.zshrc file pointing &ldquo;docker&rdquo; to &ldquo;lima nerdctl&rdquo;
 :smile: :smile: :smile:</p>
-</section>
 
-  
-  
-  <footer class="mt-12 flex flex-wrap">
-     
-    <a
-      class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="https://karthikeayan.github.io/tags/docker"
-      >docker</a
-    >
-     
-    <a
-      class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="https://karthikeayan.github.io/tags/alternate"
-      >alternate</a
-    >
-     
-    <a
-      class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="https://karthikeayan.github.io/tags/opensource"
-      >opensource</a
-    >
-     
-    <a
-      class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="https://karthikeayan.github.io/tags/free"
-      >free</a
-    >
-     
-    <a
-      class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="https://karthikeayan.github.io/tags/macos"
-      >macos</a
-    >
-     
-    <a
-      class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="https://karthikeayan.github.io/tags/lima"
-      >lima</a
-    >
-     
-    <a
-      class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="https://karthikeayan.github.io/tags/nerdctl"
-      >nerdctl</a
-    >
-    
-  </footer>
-  
-
-  
-  
-
-  
-  
-  <div class="mt-24" id="disqus_thread"></div>
-  <script>
-    const disqusShortname = 'YOUR_DISQUS_SHORTNAME';
-    const script = document.createElement('script');
-    script.src = 'https://' + disqusShortname + '.disqus.com/embed.js';
-    script.setAttribute('data-timestamp', +new Date());
-    document.head.appendChild(script);
-  </script>
-  
-
-  
-  
-  <div class="mt-24" id="graphcomment"></div>
-  <script type="text/javascript">
-    var __semio__params = {
-      graphcommentId: 'YOUR_GRAPH_COMMENT_ID',
-      behaviour: {
+        </div>
         
-      },
-      
-    };
-
-    function __semio__onload() {
-      __semio__gc_graphlogin(__semio__params);
-    }
-
-    (function () {
-      var gc = document.createElement('script');
-      gc.type = 'text/javascript';
-      gc.async = true;
-      gc.onload = __semio__onload;
-      gc.defer = true;
-      gc.src =
-        'https://integration.graphcomment.com/gc_graphlogin.js?' + Date.now();
-      (
-        document.getElementsByTagName('head')[0] ||
-        document.getElementsByTagName('body')[0]
-      ).appendChild(gc);
-    })();
-  </script>
-  
-
-  
-
-
-  
-  <div class="giscus mt-24"></div>
-  <script
-    src="https://giscus.app/client.js"
-    data-repo="YOUR_GISCUS_REPO"
-    data-repo-id="YOUR_GISCUS_REPO_ID"
-    data-category="YOUR__GISCUS_CATEGORY"
-    data-category-id="YOUR_GISCUS_CATEGORY_ID"
-    data-mapping="pathname"
-    data-strict="1"
-    data-reactions-enabled="0"
-    data-emit-metadata="0"
-    data-input-position="top"
-    data-theme="light"
-    data-lang="zh-CN"
-    data-loading="lazy"
-    crossorigin="anonymous"
-    async
-  ></script>
-  
+        
+        <footer class="post-footer" style="margin-top: 20px; padding-top: 12px; border-top: 1px solid var(--border-dark);">
+            
+            
+            
+            <div class="sharing" style="margin-bottom: 12px;">
+                <div style="font-weight: bold; margin-bottom: 6px;">📤 Share this post:</div>
+                <div style="display: flex; gap: 4px; flex-wrap: wrap;">
+                    <a href="https://twitter.com/intent/tweet?text=nerdctl-docker-alternate&url=https%3a%2f%2fkarthikeayan.github.io%2fpost%2flima-docker-alternate%2f" 
+                       target="_blank" class="btn" style="font-size: 10px;">Twitter</a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkarthikeayan.github.io%2fpost%2flima-docker-alternate%2f" 
+                       target="_blank" class="btn" style="font-size: 10px;">Facebook</a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3a%2f%2fkarthikeayan.github.io%2fpost%2flima-docker-alternate%2f" 
+                       target="_blank" class="btn" style="font-size: 10px;">LinkedIn</a>
+                    <a href="mailto:?subject=nerdctl-docker-alternate&body=https%3a%2f%2fkarthikeayan.github.io%2fpost%2flima-docker-alternate%2f" 
+                       class="btn" style="font-size: 10px;">Email</a>
+                </div>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </footer>
+    </div>
 </article>
 
 
-    </main>
+<nav class="post-nav" style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 8px 0;">
+    
+    <div class="window">
+        <div class="window-header">
+            <span class="window-title">← Previous Post</span>
+            <div class="window-controls">
+                <span class="window-button">_</span>
+                <span class="window-button">□</span>
+                <span class="window-button">×</span>
+            </div>
+        </div>
+        <div class="window-content">
+            <a href="https://karthikeayan.github.io/post/jq-cheatsheet/" style="text-decoration: none; color: inherit;">
+                <div style="font-weight: bold; font-size: 10px; margin-bottom: 2px;">jq-cheatsheet</div>
+                <div style="font-size: 9px; color: var(--text-secondary);">Oct 1, 2021</div>
+            </a>
+        </div>
+    </div>
+    
+    
+    
+    <div class="window">
+        <div class="window-header">
+            <span class="window-title">Next Post →</span>
+            <div class="window-controls">
+                <span class="window-button">_</span>
+                <span class="window-button">□</span>
+                <span class="window-button">×</span>
+            </div>
+        </div>
+        <div class="window-content">
+            <a href="https://karthikeayan.github.io/post/ecs-shell/" style="text-decoration: none; color: inherit;">
+                <div style="font-weight: bold; font-size: 10px; margin-bottom: 2px;">ecs-shell</div>
+                <div style="font-size: 9px; color: var(--text-secondary);">Dec 12, 2021</div>
+            </a>
+        </div>
+    </div>
+    
+</nav>
 
-    <footer
-  class="mx-auto flex h-[4.5rem] max-w-[--w] items-center px-8 text-xs uppercase tracking-wider opacity-60"
->
-  <div class="mr-auto">
-  
-    &copy; 2025
-    <a class="link" href="https://karthikeayan.github.io/">Karthikeyan Sundararajan</a>
-  
-  </div>
-  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
-    >powered by hugo️️</a
-  >️
-  <a
-    class="link"
-    href="https://github.com/nanxiaobei/hugo-paper"
-    rel="noopener"
-    target="_blank"
-    >hugo-paper</a
-  >
+
+
+
+        </main>
+        
+        
+        
+        <aside class="sidebar">
+            
+
+
+
+
+
+
+
+
+<div class="sidebar-section">
+    <div class="sidebar-title">🏷️ Popular Tags</div>
+    <div class="tag-cloud">
+        
+        <a href="/tags/kubernetes">
+            kubernetes (5)
+        </a>
+        
+        <a href="/tags/aws">
+            aws (3)
+        </a>
+        
+        <a href="/tags/cli">
+            cli (2)
+        </a>
+        
+        <a href="/tags/ad">
+            ad (1)
+        </a>
+        
+        <a href="/tags/ai">
+            ai (1)
+        </a>
+        
+        <a href="/tags/alternate">
+            alternate (1)
+        </a>
+        
+        <a href="/tags/api-resources">
+            api-resources (1)
+        </a>
+        
+        <a href="/tags/aws-cur">
+            aws-cur (1)
+        </a>
+        
+        <a href="/tags/azure">
+            azure (1)
+        </a>
+        
+        <a href="/tags/bash">
+            bash (1)
+        </a>
+        
+        <a href="/tags/blogs">
+            blogs (1)
+        </a>
+        
+        <a href="/tags/budget">
+            budget (1)
+        </a>
+        
+        <a href="/tags/cheatsheet">
+            cheatsheet (1)
+        </a>
+        
+        <a href="/tags/cost">
+            cost (1)
+        </a>
+        
+        <a href="/tags/csv">
+            csv (1)
+        </a>
+        
+    </div>
+</div>
+
+
+
+
+<div class="sidebar-section">
+    <div class="sidebar-title">📅 Archives</div>
+    <ul>
+        
+        <li>
+            <a href="/posts/2025-05/">
+                2025-05 (1)
+            </a>
+        </li>
+        
+        <li>
+            <a href="/posts/2025-03/">
+                2025-03 (1)
+            </a>
+        </li>
+        
+        <li>
+            <a href="/posts/2023-07/">
+                2023-07 (2)
+            </a>
+        </li>
+        
+        <li>
+            <a href="/posts/2023-05/">
+                2023-05 (1)
+            </a>
+        </li>
+        
+        <li>
+            <a href="/posts/2022-02/">
+                2022-02 (2)
+            </a>
+        </li>
+        
+        <li>
+            <a href="/posts/2021-12/">
+                2021-12 (2)
+            </a>
+        </li>
+        
+        <li>
+            <a href="/posts/2021-11/">
+                2021-11 (1)
+            </a>
+        </li>
+        
+        <li>
+            <a href="/posts/2021-10/">
+                2021-10 (1)
+            </a>
+        </li>
+        
+        <li>
+            <a href="/posts/2021-05/">
+                2021-05 (1)
+            </a>
+        </li>
+        
+        <li>
+            <a href="/posts/2021-01/">
+                2021-01 (1)
+            </a>
+        </li>
+        
+        <li>
+            <a href="/posts/2020-06/">
+                2020-06 (1)
+            </a>
+        </li>
+        
+        <li>
+            <a href="/posts/0001-01/">
+                0001-01 (1)
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+
+
+
+
+<div class="sidebar-section">
+    <div class="sidebar-title">🌐 Connect</div>
+    <ul>
+        
+        <li><a href="https://twitter.com/karthikeayan" target="_blank">🐦 Twitter</a></li>
+        
+        
+        <li><a href="https://github.com/https://github.com/karthikeayan" target="_blank">🐱 GitHub</a></li>
+        
+        
+        <li><a href="https://linkedin.com/in/https://www.linkedin.com/in/karthikeyan-sundararajan/" target="_blank">💼 LinkedIn</a></li>
+        
+        
+        <li><a href="mailto:karthikeayan@live.com">📧 Email</a></li>
+        
+        
+        
+        
+    </ul>
+</div>
+
+
+
+
+<div class="sidebar-section">
+    <div class="sidebar-title">ℹ️ Info</div>
+    <div style="font-size: 10px; line-height: 1.3;">
+        Welcome to our retro corner of the internet!
+    </div>
+</div>
+
+
+
+
+<div class="sidebar-section">
+    <div class="sidebar-title">📊 Site Stats</div>
+    <div style="font-size: 10px;">
+        <div>Total Posts: 0</div>
+        <div>Total Pages: 15</div>
+        <div>Categories: 0</div>
+        <div>Tags: 61</div>
+        <div>Last Updated: May 16, 2025</div>
+    </div>
+</div>
+
+
+
+
+<div class="sidebar-section">
+    <div class="sidebar-title">✨ Retro Corner</div>
+    <div style="text-align: center; font-size: 9px;">
+        <div style="background: #000; color: #00ff00; padding: 2px; font-family: 'Courier New', monospace; margin: 4px 0;">
+            > SYSTEM ONLINE
+        </div>
+        <div class="blink" style="color: var(--text-link);">
+            🌟 NEW! 🌟
+        </div>
+        <div style="margin: 4px 0;">
+            Best viewed in 1024x768
+        </div>
+        <div>
+            Powered by Hugo 0.123.7
+        </div>
+    </div>
+</div>
+
+
+        </aside>
+        
+        
+        
+        <footer class="site-footer">
+    <div class="window">
+        <div class="window-header">
+            <span class="window-title">💻 Site Information</span>
+            <div class="window-controls">
+                <span class="window-button">_</span>
+                <span class="window-button">□</span>
+                <span class="window-button">×</span>
+            </div>
+        </div>
+        <div class="window-content">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; font-size: 10px;">
+                
+                
+                <div>
+                    <div style="font-weight: bold; margin-bottom: 4px;">📋 Site Info</div>
+                    <div>© 2025 Karthikeyan Sundararajan</div>
+                    
+                    <div>Created by Karthikeyan Sundara Rajan</div>
+                    
+                    <div>Powered by <a href="https://gohugo.io" target="_blank">Hugo</a></div>
+                    <div>Theme: <a href="https://github.com/vibecodemama/vintage-web-hugo-theme" target="_blank">Vintage Web</a></div>
+                </div>
+                
+                
+                <div>
+                    <div style="font-weight: bold; margin-bottom: 4px;">🔗 Quick Links</div>
+                    <div><a href="https://karthikeayan.github.io/">🏠 Home</a></div>
+                    
+                    
+                    <div><a href="/categories/">📂 Categories</a></div>
+                    <div><a href="/tags/">🏷️ Tags</a></div>
+                    
+                    <div><a href="/index.xml">📡 RSS Feed</a></div>
+                    
+                </div>
+                
+                
+                
+                <div>
+                    <div style="font-weight: bold; margin-bottom: 4px;">🌐 Connect</div>
+                    
+                    <div><a href="mailto:karthikeayan@live.com">📧 Email</a></div>
+                    
+                    
+                    <div><a href="https://twitter.com/karthikeayan" target="_blank">🐦 Twitter</a></div>
+                    
+                    
+                    <div><a href="https://github.com/https://github.com/karthikeayan" target="_blank">🐱 GitHub</a></div>
+                    
+                    
+                    <div><a href="https://linkedin.com/in/https://www.linkedin.com/in/karthikeyan-sundararajan/" target="_blank">💼 LinkedIn</a></div>
+                    
+                </div>
+                
+                
+                
+                <div>
+                    <div style="font-weight: bold; margin-bottom: 4px;">📊 Statistics</div>
+                    <div>Posts: 0</div>
+                    <div>Categories: 0</div>
+                    <div>Tags: 61</div>
+                    <div>Last Update: May 16, 2025</div>
+                </div>
+            </div>
+            
+            
+            
+            <div style="margin-top: 12px; padding-top: 8px; border-top: 1px solid var(--border-dark); text-align: center;">
+                <div style="font-size: 9px; margin-bottom: 4px;">
+                    <span class="blink">⭐</span> 
+                    This site is Y2K compliant! 
+                    <span class="blink">⭐</span>
+                </div>
+                <div style="font-size: 8px; color: var(--text-secondary);">
+                    Best viewed in Any modern browser
+                    • Screen resolution: 1024x768 or higher
+                </div>
+                <div style="font-size: 8px; margin-top: 4px;">
+                    Visitor counter: 
+                    <span style="background: #000; color: #00ff00; padding: 1px 3px; font-family: 'Courier New', monospace;">
+                        999999
+                    </span>
+                </div>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+        </div>
+    </div>
 </footer>
 
-  </body>
+    </div>
+    
+    
+    
+    <div class="status-bar">
+        <div class="status-left">
+            <span class="status-item">Sat 26 Jul 2025</span>
+            <span class="status-item">16:51</span>
+        </div>
+        <div class="status-right">
+            <span class="status-item">Karthikeyan Sundararajan</span>
+            
+            <span class="status-item">264 words</span>
+            
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    <script src="https://karthikeayan.github.io/js/main.min.31530ca7626eaa26864855cd725b9ff139b89f64769abfe234c890102381f252.js"></script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
 </html>
