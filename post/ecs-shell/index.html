@@ -1,709 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ecs-shell | Karthikeyan Sundararajan</title>
-    
-    
-    
-    <meta name="description" content="get-shell-of-a-container-running-on-ECS">
-    
-    
-    
-    <meta property="og:title" content="ecs-shell | Karthikeyan Sundararajan">
-    <meta property="og:description" content="get-shell-of-a-container-running-on-ECS">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://karthikeayan.github.io/post/ecs-shell/">
-    
-    
-    
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ecs-shell | Karthikeyan Sundararajan">
-    <meta name="twitter:description" content="get-shell-of-a-container-running-on-ECS">
-    
-    
-    
-    
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
-    
-    
-    <link rel="stylesheet" href="https://karthikeayan.github.io/css/main.min.f3239320356012e75e56b485acbe843df5e30ad1394d6abfc4a43aa4d51478f0.css">
-    
-    
-    
-    
-    
-</head>
-<body>
-    
-    
-    <div class="browser-chrome">
-        <div class="toolbar">
-            <span class="toolbar-button">Back</span>
-            <span class="toolbar-button">Forward</span>
-            <span class="toolbar-button">Refresh</span>
-            <span class="toolbar-button">Home</span>
-        </div>
-        <div class="address-bar">
-            
-            https://karthikeayan.github.io/post/ecs-shell/
-            
-        </div>
-    </div>
-    
-    
-    <div class="container">
-        
-        <nav class="site-nav">
-    <ul class="nav-menu">
+<html lang="en-us" data-theme="light">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        
-        
-            
-            <li class="nav-item">
-                <a href="https://karthikeayan.github.io/" class="nav-link">
-                    Home
+<title>ecs-shell | Karthikeyan Sundararajan</title>
+
+<link rel="stylesheet" href="https://karthikeayan.github.io//css/styles.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
+integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+
+<div class="container">
+    <nav class="navbar level">
+      <div class="navbar-brand">
+          <a class="nav-item" href="https://karthikeayan.github.io/"><h1 class="title is-3">Karthikeyan Sundararajan</h1></a>
+      </div>           
+      <div class="navbar-menu has-text-centered is-active">
+          <div class="navbar-end is-centered">
+              
+                <a href="https://karthikeayan.github.io/about.html" rel="me">
+                  <span class="icon">
+                    <i class="fas fa-info"></i>
+                  </span>
                 </a>
-            </li>
-            
-            <li class="nav-item">
-                <a href="https://karthikeayan.github.io/posts/" class="nav-link">
-                    Posts
+              
+                <a href="https://github.com/karthikeayan" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
                 </a>
-            </li>
-            
-            <li class="nav-item">
-                <a href="https://karthikeayan.github.io/about/" class="nav-link">
-                    About
+              
+                <a href="https://www.linkedin.com/in/karthikeyan-sundararajan/" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-linkedin-in"></i>
+                  </span>
                 </a>
-            </li>
-            
+              
+                <a href="https://twitter.com/karthikeayan" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-twitter"></i>
+                  </span>
+                </a>
+              
+           </div>
+      </div>
+    </nav>
+  </div>
 
-            
-            
-            
-            <li class="nav-item">
-                <a href="https://karthikeayan.github.io/categories/" class="nav-link">📂 Categories</a>
-            </li>
-            
-
-            
-            
-            <li class="nav-item">
-                <a href="https://karthikeayan.github.io/tags/" class="nav-link">🏷️ Tags</a>
-            </li>
-            
-
-        
-
-        
-        
-        <li class="nav-item">
-            <a href="https://karthikeayan.github.io/index.xml" class="nav-link">📡 RSS</a>
-        </li>
-        
-    </ul>
-</nav>
-
-        
-        
-        <header class="site-header">
-            <div class="window">
-                <div class="window-header">
-                    <span class="window-title">Karthikeyan Sundararajan</span>
-                    <div class="window-controls">
-                        <span class="window-button">_</span>
-                        <span class="window-button">□</span>
-                        <span class="window-button">×</span>
-                    </div>
-                </div>
-                <div class="window-content">
-                    <a href="https://karthikeayan.github.io/" class="site-title">Karthikeyan Sundararajan</a>
-                    
-                </div>
-            </div>
-        </header>
-        
-        
-        <main class="main-content">
-            
-<article class="window">
-    <div class="window-header">
-        <span class="window-title">ecs-shell</span>
-        <div class="window-controls">
-            <span class="window-button">_</span>
-            <span class="window-button">□</span>
-            <span class="window-button">×</span>
-        </div>
-    </div>
-    <div class="window-content">
-        <header class="content-header">
-            <h1 class="post-title">ecs-shell</h1>
-            
-            
-            <div class="post-meta">
-                <span class="post-meta-item">
-                    📅 Published: Sunday, December 12, 2021
-                </span>
-                
-                <span class="post-meta-item">
-                    📖 2 min read
-                </span>
-                <span class="post-meta-item">
-                    📊 226 words
-                </span>
-                
-                
-                
-                
-                
-                
-                <span class="post-meta-item">
-                    🏷️ Tags: 
-                    
-                        
-                        <a href="/tags/aws">aws</a>
-                    
-                        , 
-                        <a href="/tags/ecs">ecs</a>
-                    
-                        , 
-                        <a href="/tags/shell">shell</a>
-                    
-                        , 
-                        <a href="/tags/bash">bash</a>
-                    
-                        , 
-                        <a href="/tags/sh">sh</a>
-                    
-                </span>
-                
-                
-                
-            </div>
-            
-            
-            
-            <div class="post-description" style="font-style: italic; margin: 8px 0; padding: 4px 8px; background: var(--bg-secondary); border: 1px inset var(--border-dark);">
-                get-shell-of-a-container-running-on-ECS
-            </div>
-            
-            
-            
-        </header>
-        
-        
-        
-        
-        
-        <div class="content">
-            <h1 id="get-shell-of-a-container-running-on-ecs">Get shell of a container running on ECS</h1>
+<div class="container">
+  <h2 class="subtitle is-6">December 12, 2021</h2>
+  <h1 class="subtitle is-size-4-mobile is-size-3-desktop">ecs-shell</h1>
+  <div class="content">
+    <h1 id="get-shell-of-a-container-running-on-ecs">Get shell of a container running on ECS</h1>
 <p>ECS is a managed container orchestration service by AWS. Known for its simplicity, especially ECS Fargate.</p>
 <p>Since ECS Fargate nodes are completely managed by AWS, there is no way to SSH into the node.</p>
 <p>Also ECS was lacking a command line option just like,</p>
-<pre tabindex="0"><code>kubectl exec
-</code></pre><p>On March 2021, AWS launched a feature which is similar to &ldquo;kubectl exec&rdquo; to obtain a shell access of a container running on ECS Fargate.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>kubectl exec
+</span></span></code></pre></div><p>On March 2021, AWS launched a feature which is similar to &ldquo;kubectl exec&rdquo; to obtain a shell access of a container running on ECS Fargate.</p>
 <p><a href="https://aws.amazon.com/blogs/containers/new-using-amazon-ecs-exec-access-your-containers-fargate-ec2/">https://aws.amazon.com/blogs/containers/new-using-amazon-ecs-exec-access-your-containers-fargate-ec2/</a></p>
 <p>This helped me a lot to troubleshoot issues.</p>
 <p>Since I have to login into lots of different containers running on different ECS Clusters which in turn running on different AWS Accounts, it became difficult to copy paste and edit the command everytime.</p>
 <p>So, I just wrote a very simple shell script which can help me. Here is the script.</p>
-<pre tabindex="0"><code>#!/usr/local/bin/bash
-
-echo Enter Cluster Name:
-read -e cluster_name
-
-echo Enter Container Name:
-read -e container_name
-
-echo Enter Service Name:
-read -e service_name
-
-echo Enter AWS Profile Name:
-read -e profile
-
-region=&#34;eu-west-1&#34;
-
-task_ids=($(aws ecs list-tasks --cluster ${cluster_name} --service-name ${service_name} --profile ${profile} --region ${region} | jq &#39;.taskArns[]&#39; -r | cut -d&#39;/&#39; -f3))
-
-counter=1
-declare -A tasks
-for i in &#34;${task_ids[@]}&#34;
-do
-  echo &#34;${counter}: ${i}&#34;
-  tasks[&#34;${counter}&#34;]=&#34;${i}&#34;
-  counter=$((counter+1))
-done
-
-echo Enter Task Number:
-read task_counter
-
-aws ecs execute-command --cluster ${cluster_name} --task ${tasks[&#34;${task_counter}&#34;]} --container ${container_name} --interactive --command &#34;/bin/sh&#34; --profile ${profile} --region ${region}
-</code></pre>
-        </div>
-        
-        
-        <footer class="post-footer" style="margin-top: 20px; padding-top: 12px; border-top: 1px solid var(--border-dark);">
-            
-            
-            
-            <div class="sharing" style="margin-bottom: 12px;">
-                <div style="font-weight: bold; margin-bottom: 6px;">📤 Share this post:</div>
-                <div style="display: flex; gap: 4px; flex-wrap: wrap;">
-                    <a href="https://twitter.com/intent/tweet?text=ecs-shell&url=https%3a%2f%2fkarthikeayan.github.io%2fpost%2fecs-shell%2f" 
-                       target="_blank" class="btn" style="font-size: 10px;">Twitter</a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkarthikeayan.github.io%2fpost%2fecs-shell%2f" 
-                       target="_blank" class="btn" style="font-size: 10px;">Facebook</a>
-                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3a%2f%2fkarthikeayan.github.io%2fpost%2fecs-shell%2f" 
-                       target="_blank" class="btn" style="font-size: 10px;">LinkedIn</a>
-                    <a href="mailto:?subject=ecs-shell&body=https%3a%2f%2fkarthikeayan.github.io%2fpost%2fecs-shell%2f" 
-                       class="btn" style="font-size: 10px;">Email</a>
-                </div>
-            </div>
-            
-            
-            
-            
-            
-            
-            
-            
-            <div class="related-posts" style="background: var(--bg-secondary); border: 1px inset var(--border-dark); padding: 8px; margin: 12px 0;">
-                <div style="font-weight: bold; margin-bottom: 6px;">🔗 Related Posts:</div>
-                <ul style="padding-left: 1rem; margin: 0; font-size: 10px;">
-                    
-                    <li style="margin: 2px 0;">
-                        <a href="https://karthikeayan.github.io/post/terraform-access-denied/">terraform-access-denied-access-denied</a>
-                        <span style="color: var(--text-secondary);"> - Jan 21</span>
-                    </li>
-                    
-                    <li style="margin: 2px 0;">
-                        <a href="https://karthikeayan.github.io/post/aws-firelens-overview/">aws-firelens-overview</a>
-                        <span style="color: var(--text-secondary);"> - Jun 22</span>
-                    </li>
-                    
-                </ul>
-            </div>
-            
-            
-            
-            
-        </footer>
-    </div>
-</article>
-
-
-<nav class="post-nav" style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 8px 0;">
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#7fbaf5">#!/usr/local/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#7fbaf5"></span>
+</span></span><span style="display:flex;"><span><span style="color:#7fbaf5">echo</span> Enter Cluster Name:
+</span></span><span style="display:flex;"><span><span style="color:#7fbaf5">read</span> -e cluster_name
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#7fbaf5">echo</span> Enter Container Name:
+</span></span><span style="display:flex;"><span><span style="color:#7fbaf5">read</span> -e container_name
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#7fbaf5">echo</span> Enter Service Name:
+</span></span><span style="display:flex;"><span><span style="color:#7fbaf5">read</span> -e service_name
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#7fbaf5">echo</span> Enter AWS Profile Name:
+</span></span><span style="display:flex;"><span><span style="color:#7fbaf5">read</span> -e profile
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#bc74c4;font-style:italic">region</span><span style="color:#bc74c4">=</span><span style="color:#82cc6a">&#34;eu-west-1&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#bc74c4;font-style:italic">task_ids</span><span style="color:#bc74c4">=(</span><span style="color:#7fbaf5">$(</span>aws ecs list-tasks --cluster <span style="color:#82cc6a">${</span><span style="color:#bc74c4;font-style:italic">cluster_name</span><span style="color:#82cc6a">}</span> --service-name <span style="color:#82cc6a">${</span><span style="color:#bc74c4;font-style:italic">service_name</span><span style="color:#82cc6a">}</span> --profile <span style="color:#82cc6a">${</span><span style="color:#bc74c4;font-style:italic">profile</span><span style="color:#82cc6a">}</span> --region <span style="color:#82cc6a">${</span><span style="color:#bc74c4;font-style:italic">region</span><span style="color:#82cc6a">}</span> <span style="color:#56b6c2">|</span> jq <span style="color:#82cc6a">&#39;.taskArns[]&#39;</span> -r <span style="color:#56b6c2">|</span> cut -d<span style="color:#82cc6a">&#39;/&#39;</span> -f3<span style="color:#7fbaf5">)</span><span style="color:#bc74c4">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#bc74c4;font-style:italic">counter</span><span style="color:#bc74c4">=</span><span style="color:#56b6c2">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#7fbaf5">declare</span> -A tasks
+</span></span><span style="display:flex;"><span><span style="color:#7fbaf5">for</span> i in <span style="color:#82cc6a">&#34;</span><span style="color:#82cc6a">${</span><span style="color:#bc74c4;font-style:italic">task_ids</span><span style="color:#56b6c2">[@]</span><span style="color:#82cc6a">}</span><span style="color:#82cc6a">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#7fbaf5">do</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#7fbaf5">echo</span> <span style="color:#82cc6a">&#34;</span><span style="color:#82cc6a">${</span><span style="color:#bc74c4;font-style:italic">counter</span><span style="color:#82cc6a">}</span><span style="color:#82cc6a">: </span><span style="color:#82cc6a">${</span><span style="color:#bc74c4;font-style:italic">i</span><span style="color:#82cc6a">}</span><span style="color:#82cc6a">&#34;</span>
+</span></span><span style="display:flex;"><span>  tasks<span style="color:#bc74c4">[</span><span style="color:#82cc6a">&#34;</span><span style="color:#82cc6a">${</span><span style="color:#bc74c4;font-style:italic">counter</span><span style="color:#82cc6a">}</span><span style="color:#82cc6a">&#34;</span><span style="color:#bc74c4">]=</span><span style="color:#82cc6a">&#34;</span><span style="color:#82cc6a">${</span><span style="color:#bc74c4;font-style:italic">i</span><span style="color:#82cc6a">}</span><span style="color:#82cc6a">&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#bc74c4;font-style:italic">counter</span><span style="color:#bc74c4">=</span><span style="color:#7fbaf5">$((</span>counter+1<span style="color:#7fbaf5">))</span>
+</span></span><span style="display:flex;"><span><span style="color:#7fbaf5">done</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#7fbaf5">echo</span> Enter Task Number:
+</span></span><span style="display:flex;"><span><span style="color:#7fbaf5">read</span> task_counter
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>aws ecs execute-command --cluster <span style="color:#82cc6a">${</span><span style="color:#bc74c4;font-style:italic">cluster_name</span><span style="color:#82cc6a">}</span> --task <span style="color:#82cc6a">${</span><span style="color:#bc74c4;font-style:italic">tasks</span><span style="color:#56b6c2">[</span><span style="color:#82cc6a">&#34;</span><span style="color:#82cc6a">${</span><span style="color:#bc74c4;font-style:italic">task_counter</span><span style="color:#82cc6a">}</span><span style="color:#82cc6a">&#34;</span><span style="color:#56b6c2">]</span><span style="color:#82cc6a">}</span> --container <span style="color:#82cc6a">${</span><span style="color:#bc74c4;font-style:italic">container_name</span><span style="color:#82cc6a">}</span> --interactive --command <span style="color:#82cc6a">&#34;/bin/sh&#34;</span> --profile <span style="color:#82cc6a">${</span><span style="color:#bc74c4;font-style:italic">profile</span><span style="color:#82cc6a">}</span> --region <span style="color:#82cc6a">${</span><span style="color:#bc74c4;font-style:italic">region</span><span style="color:#82cc6a">}</span>
+</span></span></code></pre></div>
+  </div>
+</div>
+<div class="container has-text-centered">
     
-    <div class="window">
-        <div class="window-header">
-            <span class="window-title">← Previous Post</span>
-            <div class="window-controls">
-                <span class="window-button">_</span>
-                <span class="window-button">□</span>
-                <span class="window-button">×</span>
-            </div>
-        </div>
-        <div class="window-content">
-            <a href="https://karthikeayan.github.io/post/lima-docker-alternate/" style="text-decoration: none; color: inherit;">
-                <div style="font-weight: bold; font-size: 10px; margin-bottom: 2px;">nerdctl-docker-alternate</div>
-                <div style="font-size: 9px; color: var(--text-secondary);">Nov 13, 2021</div>
-            </a>
-        </div>
-    </div>
-    
-    
-    
-    <div class="window">
-        <div class="window-header">
-            <span class="window-title">Next Post →</span>
-            <div class="window-controls">
-                <span class="window-button">_</span>
-                <span class="window-button">□</span>
-                <span class="window-button">×</span>
-            </div>
-        </div>
-        <div class="window-content">
-            <a href="https://karthikeayan.github.io/post/azure-ad-user-list/" style="text-decoration: none; color: inherit;">
-                <div style="font-weight: bold; font-size: 10px; margin-bottom: 2px;">azure-ad-user-list</div>
-                <div style="font-size: 9px; color: var(--text-secondary);">Dec 24, 2021</div>
-            </a>
-        </div>
-    </div>
-    
-</nav>
-
-
-
-
-        </main>
-        
-        
-        
-        <aside class="sidebar">
-            
-
-
-
-
-
-
-
-
-<div class="sidebar-section">
-    <div class="sidebar-title">🏷️ Popular Tags</div>
-    <div class="tag-cloud">
-        
-        <a href="/tags/kubernetes">
-            kubernetes (5)
-        </a>
-        
-        <a href="/tags/aws">
-            aws (3)
-        </a>
-        
-        <a href="/tags/cli">
-            cli (2)
-        </a>
-        
-        <a href="/tags/ad">
-            ad (1)
-        </a>
-        
-        <a href="/tags/ai">
-            ai (1)
-        </a>
-        
-        <a href="/tags/alternate">
-            alternate (1)
-        </a>
-        
-        <a href="/tags/api-resources">
-            api-resources (1)
-        </a>
-        
-        <a href="/tags/aws-cur">
-            aws-cur (1)
-        </a>
-        
-        <a href="/tags/azure">
-            azure (1)
-        </a>
-        
-        <a href="/tags/bash">
-            bash (1)
-        </a>
-        
-        <a href="/tags/blogs">
-            blogs (1)
-        </a>
-        
-        <a href="/tags/budget">
-            budget (1)
-        </a>
-        
-        <a href="/tags/cheatsheet">
-            cheatsheet (1)
-        </a>
-        
-        <a href="/tags/cost">
-            cost (1)
-        </a>
-        
-        <a href="/tags/csv">
-            csv (1)
-        </a>
-        
-    </div>
 </div>
 
-
-
-
-<div class="sidebar-section">
-    <div class="sidebar-title">📅 Archives</div>
-    <ul>
-        
-        <li>
-            <a href="/posts/2025-05/">
-                2025-05 (1)
-            </a>
-        </li>
-        
-        <li>
-            <a href="/posts/2025-03/">
-                2025-03 (1)
-            </a>
-        </li>
-        
-        <li>
-            <a href="/posts/2023-07/">
-                2023-07 (2)
-            </a>
-        </li>
-        
-        <li>
-            <a href="/posts/2023-05/">
-                2023-05 (1)
-            </a>
-        </li>
-        
-        <li>
-            <a href="/posts/2022-02/">
-                2022-02 (2)
-            </a>
-        </li>
-        
-        <li>
-            <a href="/posts/2021-12/">
-                2021-12 (2)
-            </a>
-        </li>
-        
-        <li>
-            <a href="/posts/2021-11/">
-                2021-11 (1)
-            </a>
-        </li>
-        
-        <li>
-            <a href="/posts/2021-10/">
-                2021-10 (1)
-            </a>
-        </li>
-        
-        <li>
-            <a href="/posts/2021-05/">
-                2021-05 (1)
-            </a>
-        </li>
-        
-        <li>
-            <a href="/posts/2021-01/">
-                2021-01 (1)
-            </a>
-        </li>
-        
-        <li>
-            <a href="/posts/2020-06/">
-                2020-06 (1)
-            </a>
-        </li>
-        
-        <li>
-            <a href="/posts/0001-01/">
-                0001-01 (1)
-            </a>
-        </li>
-        
-    </ul>
+<div class="container has-text-centered">
+  
 </div>
 
+<section class="section py-0">
+  <div class="container has-text-centered">
+    <p></p>
+  </div>
+</section>
 
-
-
-
-
-
-<div class="sidebar-section">
-    <div class="sidebar-title">🌐 Connect</div>
-    <ul>
-        
-        <li><a href="https://twitter.com/karthikeayan" target="_blank">🐦 Twitter</a></li>
-        
-        
-        <li><a href="https://github.com/https://github.com/karthikeayan" target="_blank">🐱 GitHub</a></li>
-        
-        
-        <li><a href="https://linkedin.com/in/https://www.linkedin.com/in/karthikeyan-sundararajan/" target="_blank">💼 LinkedIn</a></li>
-        
-        
-        <li><a href="mailto:karthikeayan@live.com">📧 Email</a></li>
-        
-        
-        
-        
-    </ul>
-</div>
-
-
-
-
-<div class="sidebar-section">
-    <div class="sidebar-title">ℹ️ Info</div>
-    <div style="font-size: 10px; line-height: 1.3;">
-        Welcome to our retro corner of the internet!
-    </div>
-</div>
-
-
-
-
-<div class="sidebar-section">
-    <div class="sidebar-title">📊 Site Stats</div>
-    <div style="font-size: 10px;">
-        <div>Total Posts: 0</div>
-        <div>Total Pages: 15</div>
-        <div>Categories: 0</div>
-        <div>Tags: 61</div>
-        <div>Last Updated: May 16, 2025</div>
-    </div>
-</div>
-
-
-
-
-<div class="sidebar-section">
-    <div class="sidebar-title">✨ Retro Corner</div>
-    <div style="text-align: center; font-size: 9px;">
-        <div style="background: #000; color: #00ff00; padding: 2px; font-family: 'Courier New', monospace; margin: 4px 0;">
-            > SYSTEM ONLINE
-        </div>
-        <div class="blink" style="color: var(--text-link);">
-            🌟 NEW! 🌟
-        </div>
-        <div style="margin: 4px 0;">
-            Best viewed in 1024x768
-        </div>
-        <div>
-            Powered by Hugo 0.123.7
-        </div>
-    </div>
-</div>
-
-
-        </aside>
-        
-        
-        
-        <footer class="site-footer">
-    <div class="window">
-        <div class="window-header">
-            <span class="window-title">💻 Site Information</span>
-            <div class="window-controls">
-                <span class="window-button">_</span>
-                <span class="window-button">□</span>
-                <span class="window-button">×</span>
-            </div>
-        </div>
-        <div class="window-content">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; font-size: 10px;">
-                
-                
-                <div>
-                    <div style="font-weight: bold; margin-bottom: 4px;">📋 Site Info</div>
-                    <div>© 2025 Karthikeyan Sundararajan</div>
-                    
-                    <div>Created by Karthikeyan Sundara Rajan</div>
-                    
-                    <div>Powered by <a href="https://gohugo.io" target="_blank">Hugo</a></div>
-                    <div>Theme: <a href="https://github.com/vibecodemama/vintage-web-hugo-theme" target="_blank">Vintage Web</a></div>
-                </div>
-                
-                
-                <div>
-                    <div style="font-weight: bold; margin-bottom: 4px;">🔗 Quick Links</div>
-                    <div><a href="https://karthikeayan.github.io/">🏠 Home</a></div>
-                    
-                    
-                    <div><a href="/categories/">📂 Categories</a></div>
-                    <div><a href="/tags/">🏷️ Tags</a></div>
-                    
-                    <div><a href="/index.xml">📡 RSS Feed</a></div>
-                    
-                </div>
-                
-                
-                
-                <div>
-                    <div style="font-weight: bold; margin-bottom: 4px;">🌐 Connect</div>
-                    
-                    <div><a href="mailto:karthikeayan@live.com">📧 Email</a></div>
-                    
-                    
-                    <div><a href="https://twitter.com/karthikeayan" target="_blank">🐦 Twitter</a></div>
-                    
-                    
-                    <div><a href="https://github.com/https://github.com/karthikeayan" target="_blank">🐱 GitHub</a></div>
-                    
-                    
-                    <div><a href="https://linkedin.com/in/https://www.linkedin.com/in/karthikeyan-sundararajan/" target="_blank">💼 LinkedIn</a></div>
-                    
-                </div>
-                
-                
-                
-                <div>
-                    <div style="font-weight: bold; margin-bottom: 4px;">📊 Statistics</div>
-                    <div>Posts: 0</div>
-                    <div>Categories: 0</div>
-                    <div>Tags: 61</div>
-                    <div>Last Update: May 16, 2025</div>
-                </div>
-            </div>
-            
-            
-            
-            <div style="margin-top: 12px; padding-top: 8px; border-top: 1px solid var(--border-dark); text-align: center;">
-                <div style="font-size: 9px; margin-bottom: 4px;">
-                    <span class="blink">⭐</span> 
-                    This site is Y2K compliant! 
-                    <span class="blink">⭐</span>
-                </div>
-                <div style="font-size: 8px; color: var(--text-secondary);">
-                    Best viewed in Any modern browser
-                    • Screen resolution: 1024x768 or higher
-                </div>
-                <div style="font-size: 8px; margin-top: 4px;">
-                    Visitor counter: 
-                    <span style="background: #000; color: #00ff00; padding: 1px 3px; font-family: 'Courier New', monospace;">
-                        999999
-                    </span>
-                </div>
-            </div>
-            
-            
-            
-            
-            
-            
-            
-        </div>
-    </div>
-</footer>
-
-    </div>
-    
-    
-    
-    <div class="status-bar">
-        <div class="status-left">
-            <span class="status-item">Sat 26 Jul 2025</span>
-            <span class="status-item">16:51</span>
-        </div>
-        <div class="status-right">
-            <span class="status-item">Karthikeyan Sundararajan</span>
-            
-            <span class="status-item">226 words</span>
-            
-        </div>
-    </div>
-    
-    
-    
-    
-    
-    
-    <script src="https://karthikeayan.github.io/js/main.min.31530ca7626eaa26864855cd725b9ff139b89f64769abfe234c890102381f252.js"></script>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</body>
-</html>

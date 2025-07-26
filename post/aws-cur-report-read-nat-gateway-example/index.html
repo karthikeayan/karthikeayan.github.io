@@ -1,825 +1,232 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>aws-cur-report-read-nat-gateway-example | Karthikeyan Sundararajan</title>
-    
-    
-    
-    <meta name="description" content="Read AWS CUR Report to understand NAT Gateway usage by ID">
-    
-    
-    
-    <meta property="og:title" content="aws-cur-report-read-nat-gateway-example | Karthikeyan Sundararajan">
-    <meta property="og:description" content="Read AWS CUR Report to understand NAT Gateway usage by ID">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://karthikeayan.github.io/post/aws-cur-report-read-nat-gateway-example/">
-    
-    
-    
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="aws-cur-report-read-nat-gateway-example | Karthikeyan Sundararajan">
-    <meta name="twitter:description" content="Read AWS CUR Report to understand NAT Gateway usage by ID">
-    
-    
-    
-    
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
-    
-    
-    <link rel="stylesheet" href="https://karthikeayan.github.io/css/main.min.f3239320356012e75e56b485acbe843df5e30ad1394d6abfc4a43aa4d51478f0.css">
-    
-    
-    
-    
-    
-</head>
-<body>
-    
-    
-    <div class="browser-chrome">
-        <div class="toolbar">
-            <span class="toolbar-button">Back</span>
-            <span class="toolbar-button">Forward</span>
-            <span class="toolbar-button">Refresh</span>
-            <span class="toolbar-button">Home</span>
-        </div>
-        <div class="address-bar">
-            
-            https://karthikeayan.github.io/post/aws-cur-report-read-nat-gateway-example/
-            
-        </div>
-    </div>
-    
-    
-    <div class="container">
-        
-        <nav class="site-nav">
-    <ul class="nav-menu">
+<html lang="en-us" data-theme="light">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        
-        
-            
-            <li class="nav-item">
-                <a href="https://karthikeayan.github.io/" class="nav-link">
-                    Home
+<title>aws-cur-report-read-nat-gateway-example | Karthikeyan Sundararajan</title>
+
+<link rel="stylesheet" href="https://karthikeayan.github.io//css/styles.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
+integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+
+<div class="container">
+    <nav class="navbar level">
+      <div class="navbar-brand">
+          <a class="nav-item" href="https://karthikeayan.github.io/"><h1 class="title is-3">Karthikeyan Sundararajan</h1></a>
+      </div>           
+      <div class="navbar-menu has-text-centered is-active">
+          <div class="navbar-end is-centered">
+              
+                <a href="https://karthikeayan.github.io/about.html" rel="me">
+                  <span class="icon">
+                    <i class="fas fa-info"></i>
+                  </span>
                 </a>
-            </li>
-            
-            <li class="nav-item">
-                <a href="https://karthikeayan.github.io/posts/" class="nav-link">
-                    Posts
+              
+                <a href="https://github.com/karthikeayan" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
                 </a>
-            </li>
-            
-            <li class="nav-item">
-                <a href="https://karthikeayan.github.io/about/" class="nav-link">
-                    About
+              
+                <a href="https://www.linkedin.com/in/karthikeyan-sundararajan/" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-linkedin-in"></i>
+                  </span>
                 </a>
-            </li>
-            
+              
+                <a href="https://twitter.com/karthikeayan" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-twitter"></i>
+                  </span>
+                </a>
+              
+           </div>
+      </div>
+    </nav>
+  </div>
 
-            
-            
-            
-            <li class="nav-item">
-                <a href="https://karthikeayan.github.io/categories/" class="nav-link">📂 Categories</a>
-            </li>
-            
-
-            
-            
-            <li class="nav-item">
-                <a href="https://karthikeayan.github.io/tags/" class="nav-link">🏷️ Tags</a>
-            </li>
-            
-
-        
-
-        
-        
-        <li class="nav-item">
-            <a href="https://karthikeayan.github.io/index.xml" class="nav-link">📡 RSS</a>
-        </li>
-        
-    </ul>
-</nav>
-
-        
-        
-        <header class="site-header">
-            <div class="window">
-                <div class="window-header">
-                    <span class="window-title">Karthikeyan Sundararajan</span>
-                    <div class="window-controls">
-                        <span class="window-button">_</span>
-                        <span class="window-button">□</span>
-                        <span class="window-button">×</span>
-                    </div>
-                </div>
-                <div class="window-content">
-                    <a href="https://karthikeayan.github.io/" class="site-title">Karthikeyan Sundararajan</a>
-                    
-                </div>
-            </div>
-        </header>
-        
-        
-        <main class="main-content">
-            
-<article class="window">
-    <div class="window-header">
-        <span class="window-title">aws-cur-report-read-nat-gateway-example</span>
-        <div class="window-controls">
-            <span class="window-button">_</span>
-            <span class="window-button">□</span>
-            <span class="window-button">×</span>
-        </div>
-    </div>
-    <div class="window-content">
-        <header class="content-header">
-            <h1 class="post-title">aws-cur-report-read-nat-gateway-example</h1>
-            
-            
-            <div class="post-meta">
-                <span class="post-meta-item">
-                    📅 Published: Friday, May 16, 2025
-                </span>
-                
-                <span class="post-meta-item">
-                    📖 3 min read
-                </span>
-                <span class="post-meta-item">
-                    📊 437 words
-                </span>
-                
-                
-                
-                
-                
-                
-                <span class="post-meta-item">
-                    🏷️ Tags: 
-                    
-                        
-                        <a href="/tags/aws-cur">aws-cur</a>
-                    
-                        , 
-                        <a href="/tags/cost">cost</a>
-                    
-                        , 
-                        <a href="/tags/finops">finops</a>
-                    
-                        , 
-                        <a href="/tags/budget">budget</a>
-                    
-                        , 
-                        <a href="/tags/nat-gateway">nat-gateway</a>
-                    
-                        , 
-                        <a href="/tags/pandas">pandas</a>
-                    
-                        , 
-                        <a href="/tags/csv">csv</a>
-                    
-                        , 
-                        <a href="/tags/kubernetes">kubernetes</a>
-                    
-                </span>
-                
-                
-                
-            </div>
-            
-            
-            
-            <div class="post-description" style="font-style: italic; margin: 8px 0; padding: 4px 8px; background: var(--bg-secondary); border: 1px inset var(--border-dark);">
-                Read AWS CUR Report to understand NAT Gateway usage by ID
-            </div>
-            
-            
-            
-        </header>
-        
-        
-        
-        
-        
-        <div class="content">
-            <h1 id="read-aws-cur-report-to-understand-nat-gateway-usage-by-id">Read AWS CUR Report to understand NAT Gateway usage by ID</h1>
+<div class="container">
+  <h2 class="subtitle is-6">May 16, 2025</h2>
+  <h1 class="subtitle is-size-4-mobile is-size-3-desktop">aws-cur-report-read-nat-gateway-example</h1>
+  <div class="content">
+    <h1 id="read-aws-cur-report-to-understand-nat-gateway-usage-by-id">Read AWS CUR Report to understand NAT Gateway usage by ID</h1>
 <p>Build Jupyter Notebook Image with below Dockerfile</p>
-<pre tabindex="0"><code>FROM python:3.13
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span>FROM python<span style="color:#56b6c2">:</span><span style="color:#56b6c2">3.13</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#3e4460"># Set the working directory to /app</span>
+</span></span><span style="display:flex;"><span>WORKDIR <span style="color:#bc74c4">/</span>app
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#3e4460"># Install Jupyter Notebook</span>
+</span></span><span style="display:flex;"><span>RUN pip install jupyter<span style="color:#bc74c4">===</span><span style="color:#56b6c2">1.1</span><span style="color:#bc74c4">.</span><span style="color:#56b6c2">1</span>
+</span></span><span style="display:flex;"><span>RUN pip install pandas
+</span></span><span style="display:flex;"><span>RUN pip install awscli
+</span></span><span style="display:flex;"><span>RUN pip install boto3
+</span></span><span style="display:flex;"><span>RUN pip install fsspec
+</span></span><span style="display:flex;"><span>RUN pip install s3fs
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#3e4460"># Make port 8888 available to the world outside this container</span>
+</span></span><span style="display:flex;"><span>EXPOSE <span style="color:#56b6c2">8888</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#3e4460"># Define environment variable</span>
+</span></span><span style="display:flex;"><span><span style="color:#3e4460"># ENV NAME World</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#3e4460"># Run Jupyter Notebook when the container launches</span>
+</span></span><span style="display:flex;"><span>CMD <span style="color:#56b6c2">[</span><span style="color:#82cc6a">&#34;jupyter&#34;</span><span style="color:#56b6c2">,</span> <span style="color:#82cc6a">&#34;notebook&#34;</span><span style="color:#56b6c2">,</span> <span style="color:#82cc6a">&#34;--ip=0.0.0.0&#34;</span><span style="color:#56b6c2">,</span> <span style="color:#82cc6a">&#34;--port=8888&#34;</span><span style="color:#56b6c2">,</span> <span style="color:#82cc6a">&#34;--no-browser&#34;</span><span style="color:#56b6c2">,</span> <span style="color:#82cc6a">&#34;--allow-root&#34;</span><span style="color:#56b6c2">]</span>
+</span></span></code></pre></div><p>Build and push the image to container registry</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>docker build . -t jupyter-notebook:1.1.1
+</span></span><span style="display:flex;"><span>docker push jupyter-notebook:1.1.1
+</span></span></code></pre></div><p>Deploy to Kubernetes</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>apiVersion: v1
+</span></span><span style="display:flex;"><span>kind: Namespace
+</span></span><span style="display:flex;"><span>metadata:
+</span></span><span style="display:flex;"><span>  name: jupyter-notebook
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>apiVersion: v1
+</span></span><span style="display:flex;"><span>kind: PersistentVolumeClaim
+</span></span><span style="display:flex;"><span>metadata:
+</span></span><span style="display:flex;"><span>  name: jupyter-notebook
+</span></span><span style="display:flex;"><span>spec:
+</span></span><span style="display:flex;"><span>  accessModes:
+</span></span><span style="display:flex;"><span>    - ReadWriteOnce
+</span></span><span style="display:flex;"><span>  resources:
+</span></span><span style="display:flex;"><span>    requests:
+</span></span><span style="display:flex;"><span>      storage: 5Gi
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>apiVersion: v1
+</span></span><span style="display:flex;"><span>kind: ConfigMap
+</span></span><span style="display:flex;"><span>metadata:
+</span></span><span style="display:flex;"><span>  name: jupyter-notebook-token
+</span></span><span style="display:flex;"><span>data:
+</span></span><span style="display:flex;"><span>  jupyter_notebook_config.py: |
+</span></span><span style="display:flex;"><span>    c.NotebookApp.token = &#39;1234RANDOM_TOKENc56789&#39;
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>apiVersion: apps/v1
+</span></span><span style="display:flex;"><span>kind: Deployment
+</span></span><span style="display:flex;"><span>metadata:
+</span></span><span style="display:flex;"><span>  name: jupyter-notebook
+</span></span><span style="display:flex;"><span>  namespace: jupyter-notebook
+</span></span><span style="display:flex;"><span>  labels:
+</span></span><span style="display:flex;"><span>    app: jupyter-notebook
+</span></span><span style="display:flex;"><span>spec:
+</span></span><span style="display:flex;"><span>  replicas: 1
+</span></span><span style="display:flex;"><span>  selector:
+</span></span><span style="display:flex;"><span>    matchLabels:
+</span></span><span style="display:flex;"><span>      app: jupyter-notebook
+</span></span><span style="display:flex;"><span>  template:
+</span></span><span style="display:flex;"><span>    metadata:
+</span></span><span style="display:flex;"><span>      labels:
+</span></span><span style="display:flex;"><span>        app: jupyter-notebook
+</span></span><span style="display:flex;"><span>    spec:
+</span></span><span style="display:flex;"><span>      containers:
+</span></span><span style="display:flex;"><span>      - name: jupyter-notebook
+</span></span><span style="display:flex;"><span>        image: jupyter-notebook:1.1.1
+</span></span><span style="display:flex;"><span>        imagePullPolicy: Always
+</span></span><span style="display:flex;"><span>        resources:
+</span></span><span style="display:flex;"><span>          requests:
+</span></span><span style="display:flex;"><span>            memory: 14G
+</span></span><span style="display:flex;"><span>        ports:
+</span></span><span style="display:flex;"><span>        - containerPort: 8888
+</span></span><span style="display:flex;"><span>        volumeMounts:
+</span></span><span style="display:flex;"><span>        - name: storage
+</span></span><span style="display:flex;"><span>          mountPath: /app
+</span></span><span style="display:flex;"><span>        - name: config-volume
+</span></span><span style="display:flex;"><span>          mountPath: /root/.jupyter/jupyter_notebook_config.py
+</span></span><span style="display:flex;"><span>          subPath: jupyter_notebook_config.py
+</span></span><span style="display:flex;"><span>      volumes:
+</span></span><span style="display:flex;"><span>      - name: storage
+</span></span><span style="display:flex;"><span>        persistentVolumeClaim:
+</span></span><span style="display:flex;"><span>          claimName: jupyter-notebook
+</span></span><span style="display:flex;"><span>      - name: config-volume
+</span></span><span style="display:flex;"><span>        configMap:
+</span></span><span style="display:flex;"><span>          name: jupyter-notebook-token
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>apiVersion: v1
+</span></span><span style="display:flex;"><span>kind: Service
+</span></span><span style="display:flex;"><span>metadata:
+</span></span><span style="display:flex;"><span>  name: jupyter-notebook
+</span></span><span style="display:flex;"><span>  namespace: jupyter-notebook
+</span></span><span style="display:flex;"><span>spec:
+</span></span><span style="display:flex;"><span>  selector:
+</span></span><span style="display:flex;"><span>    app: jupyter-notebook
+</span></span><span style="display:flex;"><span>  ports:
+</span></span><span style="display:flex;"><span>    - protocol: TCP
+</span></span><span style="display:flex;"><span>      port: 80
+</span></span><span style="display:flex;"><span>      targetPort: 8888
+</span></span><span style="display:flex;"><span>  type: ClusterIP
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>apiVersion: networking.k8s.io/v1
+</span></span><span style="display:flex;"><span>kind: Ingress
+</span></span><span style="display:flex;"><span>metadata:
+</span></span><span style="display:flex;"><span>  name: jupyter-notebook
+</span></span><span style="display:flex;"><span>  namespace: jupyter-notebook
+</span></span><span style="display:flex;"><span>  annotations:
+</span></span><span style="display:flex;"><span>    kubernetes.io/ingress.class: nginx
+</span></span><span style="display:flex;"><span>spec:
+</span></span><span style="display:flex;"><span>  rules:
+</span></span><span style="display:flex;"><span>    - host: jupyter.mycompany.com
+</span></span><span style="display:flex;"><span>      http:
+</span></span><span style="display:flex;"><span>        paths:
+</span></span><span style="display:flex;"><span>          - path: /
+</span></span><span style="display:flex;"><span>            pathType: Prefix
+</span></span><span style="display:flex;"><span>            backend:
+</span></span><span style="display:flex;"><span>              service:
+</span></span><span style="display:flex;"><span>                name: jupyter-notebook
+</span></span><span style="display:flex;"><span>                port:
+</span></span><span style="display:flex;"><span>                  number: 80
+</span></span></code></pre></div><p>Python snippet to read the CUR from AWS S3 and group the NAT Gateway cost by ID</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># Approximate execution time: 500 seconds
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>import boto3
+</span></span><span style="display:flex;"><span>from io import BytesIO
+</span></span><span style="display:flex;"><span>import pandas as pd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>s3 = boto3.client(&#34;s3&#34;)
+</span></span><span style="display:flex;"><span>bucket_name = &#34;YOUR_BUCKET_NAME&#34;
+</span></span><span style="display:flex;"><span>prefix = &#34;CUR/MyCostReport/20250401-20250501/&#34;  # Adjust based on your report structure
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># List all files in the CUR folder
+</span></span><span style="display:flex;"><span>response = s3.list_objects_v2(Bucket=bucket_name, Prefix=prefix)
+</span></span><span style="display:flex;"><span>files = [obj[&#34;Key&#34;] for obj in response.get(&#34;Contents&#34;, []) if obj[&#34;Key&#34;].endswith(&#34;.csv.gz&#34;)]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>chunksize = 10000
+</span></span><span style="display:flex;"><span>agg_dict = {}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Process all files
+</span></span><span style="display:flex;"><span>for file_key in files:
+</span></span><span style="display:flex;"><span>    response = s3.get_object(Bucket=bucket_name, Key=file_key)
+</span></span><span style="display:flex;"><span>    file_content = BytesIO(response[&#34;Body&#34;].read())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    for chunk in pd.read_csv(file_content, compression=&#34;gzip&#34;, low_memory=False, chunksize=chunksize):
+</span></span><span style="display:flex;"><span>        chunk_filtered = chunk.loc[chunk[&#34;product/groupDescription&#34;] == &#34;Charge for per GB data processed by NatGateways&#34;]
+</span></span><span style="display:flex;"><span>        grouped_chunk = chunk_filtered.groupby([&#34;lineItem/ResourceId&#34;, &#34;lineItem/UsageAccountId&#34;])[&#34;lineItem/BlendedCost&#34;].sum()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        for index, value in grouped_chunk.items():
+</span></span><span style="display:flex;"><span>            agg_dict[index] = agg_dict.get(index, 0) + value
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Convert results to DataFrame
+</span></span><span style="display:flex;"><span>df_grouped = pd.DataFrame(list(agg_dict.items()), columns=[&#34;Resource_Account&#34;, &#34;BlendedCost&#34;])
+</span></span><span style="display:flex;"><span>df_sorted = df_grouped.sort_values(by=&#34;BlendedCost&#34;, ascending=False)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(df_sorted.to_string(index=False))
+</span></span></code></pre></div><p>In the above script, I used 10000 as chunksize, you can adjust this based on the memory of your Jupyter Notebook container memory</p>
 
-# Set the working directory to /app
-WORKDIR /app
-
-# Install Jupyter Notebook
-RUN pip install jupyter===1.1.1
-RUN pip install pandas
-RUN pip install awscli
-RUN pip install boto3
-RUN pip install fsspec
-RUN pip install s3fs
-
-# Make port 8888 available to the world outside this container
-EXPOSE 8888
-
-# Define environment variable
-# ENV NAME World
-
-# Run Jupyter Notebook when the container launches
-CMD [&#34;jupyter&#34;, &#34;notebook&#34;, &#34;--ip=0.0.0.0&#34;, &#34;--port=8888&#34;, &#34;--no-browser&#34;, &#34;--allow-root&#34;]
-</code></pre><p>Build and push the image to container registry</p>
-<pre tabindex="0"><code>docker build . -t jupyter-notebook:1.1.1
-docker push jupyter-notebook:1.1.1
-</code></pre><p>Deploy to Kubernetes</p>
-<pre tabindex="0"><code>apiVersion: v1
-kind: Namespace
-metadata:
-  name: jupyter-notebook
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: jupyter-notebook
-spec:
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 5Gi
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: jupyter-notebook-token
-data:
-  jupyter_notebook_config.py: |
-    c.NotebookApp.token = &#39;1234RANDOM_TOKENc56789&#39;
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: jupyter-notebook
-  namespace: jupyter-notebook
-  labels:
-    app: jupyter-notebook
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: jupyter-notebook
-  template:
-    metadata:
-      labels:
-        app: jupyter-notebook
-    spec:
-      containers:
-      - name: jupyter-notebook
-        image: jupyter-notebook:1.1.1
-        imagePullPolicy: Always
-        resources:
-          requests:
-            memory: 14G
-        ports:
-        - containerPort: 8888
-        volumeMounts:
-        - name: storage
-          mountPath: /app
-        - name: config-volume
-          mountPath: /root/.jupyter/jupyter_notebook_config.py
-          subPath: jupyter_notebook_config.py
-      volumes:
-      - name: storage
-        persistentVolumeClaim:
-          claimName: jupyter-notebook
-      - name: config-volume
-        configMap:
-          name: jupyter-notebook-token
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: jupyter-notebook
-  namespace: jupyter-notebook
-spec:
-  selector:
-    app: jupyter-notebook
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 8888
-  type: ClusterIP
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: jupyter-notebook
-  namespace: jupyter-notebook
-  annotations:
-    kubernetes.io/ingress.class: nginx
-spec:
-  rules:
-    - host: jupyter.mycompany.com
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: jupyter-notebook
-                port:
-                  number: 80
-</code></pre><p>Python snippet to read the CUR from AWS S3 and group the NAT Gateway cost by ID</p>
-<pre tabindex="0"><code># Approximate execution time: 500 seconds
-
-import boto3
-from io import BytesIO
-import pandas as pd
-
-s3 = boto3.client(&#34;s3&#34;)
-bucket_name = &#34;YOUR_BUCKET_NAME&#34;
-prefix = &#34;CUR/MyCostReport/20250401-20250501/&#34;  # Adjust based on your report structure
-
-# List all files in the CUR folder
-response = s3.list_objects_v2(Bucket=bucket_name, Prefix=prefix)
-files = [obj[&#34;Key&#34;] for obj in response.get(&#34;Contents&#34;, []) if obj[&#34;Key&#34;].endswith(&#34;.csv.gz&#34;)]
-
-chunksize = 10000
-agg_dict = {}
-
-# Process all files
-for file_key in files:
-    response = s3.get_object(Bucket=bucket_name, Key=file_key)
-    file_content = BytesIO(response[&#34;Body&#34;].read())
-
-    for chunk in pd.read_csv(file_content, compression=&#34;gzip&#34;, low_memory=False, chunksize=chunksize):
-        chunk_filtered = chunk.loc[chunk[&#34;product/groupDescription&#34;] == &#34;Charge for per GB data processed by NatGateways&#34;]
-        grouped_chunk = chunk_filtered.groupby([&#34;lineItem/ResourceId&#34;, &#34;lineItem/UsageAccountId&#34;])[&#34;lineItem/BlendedCost&#34;].sum()
-
-        for index, value in grouped_chunk.items():
-            agg_dict[index] = agg_dict.get(index, 0) + value
-
-# Convert results to DataFrame
-df_grouped = pd.DataFrame(list(agg_dict.items()), columns=[&#34;Resource_Account&#34;, &#34;BlendedCost&#34;])
-df_sorted = df_grouped.sort_values(by=&#34;BlendedCost&#34;, ascending=False)
-
-print(df_sorted.to_string(index=False))
-</code></pre><p>In the above script, I used 10000 as chunksize, you can adjust this based on the memory of your Jupyter Notebook container memory</p>
-
-        </div>
-        
-        
-        <footer class="post-footer" style="margin-top: 20px; padding-top: 12px; border-top: 1px solid var(--border-dark);">
-            
-            
-            
-            <div class="sharing" style="margin-bottom: 12px;">
-                <div style="font-weight: bold; margin-bottom: 6px;">📤 Share this post:</div>
-                <div style="display: flex; gap: 4px; flex-wrap: wrap;">
-                    <a href="https://twitter.com/intent/tweet?text=aws-cur-report-read-nat-gateway-example&url=https%3a%2f%2fkarthikeayan.github.io%2fpost%2faws-cur-report-read-nat-gateway-example%2f" 
-                       target="_blank" class="btn" style="font-size: 10px;">Twitter</a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkarthikeayan.github.io%2fpost%2faws-cur-report-read-nat-gateway-example%2f" 
-                       target="_blank" class="btn" style="font-size: 10px;">Facebook</a>
-                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3a%2f%2fkarthikeayan.github.io%2fpost%2faws-cur-report-read-nat-gateway-example%2f" 
-                       target="_blank" class="btn" style="font-size: 10px;">LinkedIn</a>
-                    <a href="mailto:?subject=aws-cur-report-read-nat-gateway-example&body=https%3a%2f%2fkarthikeayan.github.io%2fpost%2faws-cur-report-read-nat-gateway-example%2f" 
-                       class="btn" style="font-size: 10px;">Email</a>
-                </div>
-            </div>
-            
-            
-            
-            
-            
-            
-            
-            
-            <div class="related-posts" style="background: var(--bg-secondary); border: 1px inset var(--border-dark); padding: 8px; margin: 12px 0;">
-                <div style="font-weight: bold; margin-bottom: 6px;">🔗 Related Posts:</div>
-                <ul style="padding-left: 1rem; margin: 0; font-size: 10px;">
-                    
-                    <li style="margin: 2px 0;">
-                        <a href="https://karthikeayan.github.io/post/aws-cloudwatch-k8s-api-log-filter/">aws-cloudwatch-k8s-api-log-filter</a>
-                        <span style="color: var(--text-secondary);"> - Jul 27</span>
-                    </li>
-                    
-                    <li style="margin: 2px 0;">
-                        <a href="https://karthikeayan.github.io/post/kubernetes-api-resources/">kubernetes-api-resources</a>
-                        <span style="color: var(--text-secondary);"> - Jul 21</span>
-                    </li>
-                    
-                    <li style="margin: 2px 0;">
-                        <a href="https://karthikeayan.github.io/post/tcpdump-https/">tcpdump-https</a>
-                        <span style="color: var(--text-secondary);"> - May 21</span>
-                    </li>
-                    
-                </ul>
-            </div>
-            
-            
-            
-            
-        </footer>
-    </div>
-</article>
-
-
-<nav class="post-nav" style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 8px 0;">
+  </div>
+</div>
+<div class="container has-text-centered">
     
-    <div class="window">
-        <div class="window-header">
-            <span class="window-title">← Previous Post</span>
-            <div class="window-controls">
-                <span class="window-button">_</span>
-                <span class="window-button">□</span>
-                <span class="window-button">×</span>
-            </div>
-        </div>
-        <div class="window-content">
-            <a href="https://karthikeayan.github.io/post/flowise-openwebui-ollama-docker-compose/" style="text-decoration: none; color: inherit;">
-                <div style="font-weight: bold; font-size: 10px; margin-bottom: 2px;">flowise-openwebui-ollama-docker-compose</div>
-                <div style="font-size: 9px; color: var(--text-secondary);">Mar 14, 2025</div>
-            </a>
-        </div>
-    </div>
-    
-    
-    
-</nav>
-
-
-
-
-        </main>
-        
-        
-        
-        <aside class="sidebar">
-            
-
-
-
-
-
-
-
-
-<div class="sidebar-section">
-    <div class="sidebar-title">🏷️ Popular Tags</div>
-    <div class="tag-cloud">
-        
-        <a href="/tags/kubernetes">
-            kubernetes (5)
-        </a>
-        
-        <a href="/tags/aws">
-            aws (3)
-        </a>
-        
-        <a href="/tags/cli">
-            cli (2)
-        </a>
-        
-        <a href="/tags/ad">
-            ad (1)
-        </a>
-        
-        <a href="/tags/ai">
-            ai (1)
-        </a>
-        
-        <a href="/tags/alternate">
-            alternate (1)
-        </a>
-        
-        <a href="/tags/api-resources">
-            api-resources (1)
-        </a>
-        
-        <a href="/tags/aws-cur">
-            aws-cur (1)
-        </a>
-        
-        <a href="/tags/azure">
-            azure (1)
-        </a>
-        
-        <a href="/tags/bash">
-            bash (1)
-        </a>
-        
-        <a href="/tags/blogs">
-            blogs (1)
-        </a>
-        
-        <a href="/tags/budget">
-            budget (1)
-        </a>
-        
-        <a href="/tags/cheatsheet">
-            cheatsheet (1)
-        </a>
-        
-        <a href="/tags/cost">
-            cost (1)
-        </a>
-        
-        <a href="/tags/csv">
-            csv (1)
-        </a>
-        
-    </div>
 </div>
 
-
-
-
-<div class="sidebar-section">
-    <div class="sidebar-title">📅 Archives</div>
-    <ul>
-        
-        <li>
-            <a href="/posts/2025-05/">
-                2025-05 (1)
-            </a>
-        </li>
-        
-        <li>
-            <a href="/posts/2025-03/">
-                2025-03 (1)
-            </a>
-        </li>
-        
-        <li>
-            <a href="/posts/2023-07/">
-                2023-07 (2)
-            </a>
-        </li>
-        
-        <li>
-            <a href="/posts/2023-05/">
-                2023-05 (1)
-            </a>
-        </li>
-        
-        <li>
-            <a href="/posts/2022-02/">
-                2022-02 (2)
-            </a>
-        </li>
-        
-        <li>
-            <a href="/posts/2021-12/">
-                2021-12 (2)
-            </a>
-        </li>
-        
-        <li>
-            <a href="/posts/2021-11/">
-                2021-11 (1)
-            </a>
-        </li>
-        
-        <li>
-            <a href="/posts/2021-10/">
-                2021-10 (1)
-            </a>
-        </li>
-        
-        <li>
-            <a href="/posts/2021-05/">
-                2021-05 (1)
-            </a>
-        </li>
-        
-        <li>
-            <a href="/posts/2021-01/">
-                2021-01 (1)
-            </a>
-        </li>
-        
-        <li>
-            <a href="/posts/2020-06/">
-                2020-06 (1)
-            </a>
-        </li>
-        
-        <li>
-            <a href="/posts/0001-01/">
-                0001-01 (1)
-            </a>
-        </li>
-        
-    </ul>
+<div class="container has-text-centered">
+  
 </div>
 
+<section class="section py-0">
+  <div class="container has-text-centered">
+    <p></p>
+  </div>
+</section>
 
-
-
-
-
-
-<div class="sidebar-section">
-    <div class="sidebar-title">🌐 Connect</div>
-    <ul>
-        
-        <li><a href="https://twitter.com/karthikeayan" target="_blank">🐦 Twitter</a></li>
-        
-        
-        <li><a href="https://github.com/https://github.com/karthikeayan" target="_blank">🐱 GitHub</a></li>
-        
-        
-        <li><a href="https://linkedin.com/in/https://www.linkedin.com/in/karthikeyan-sundararajan/" target="_blank">💼 LinkedIn</a></li>
-        
-        
-        <li><a href="mailto:karthikeayan@live.com">📧 Email</a></li>
-        
-        
-        
-        
-    </ul>
-</div>
-
-
-
-
-<div class="sidebar-section">
-    <div class="sidebar-title">ℹ️ Info</div>
-    <div style="font-size: 10px; line-height: 1.3;">
-        Welcome to our retro corner of the internet!
-    </div>
-</div>
-
-
-
-
-<div class="sidebar-section">
-    <div class="sidebar-title">📊 Site Stats</div>
-    <div style="font-size: 10px;">
-        <div>Total Posts: 0</div>
-        <div>Total Pages: 15</div>
-        <div>Categories: 0</div>
-        <div>Tags: 61</div>
-        <div>Last Updated: May 16, 2025</div>
-    </div>
-</div>
-
-
-
-
-<div class="sidebar-section">
-    <div class="sidebar-title">✨ Retro Corner</div>
-    <div style="text-align: center; font-size: 9px;">
-        <div style="background: #000; color: #00ff00; padding: 2px; font-family: 'Courier New', monospace; margin: 4px 0;">
-            > SYSTEM ONLINE
-        </div>
-        <div class="blink" style="color: var(--text-link);">
-            🌟 NEW! 🌟
-        </div>
-        <div style="margin: 4px 0;">
-            Best viewed in 1024x768
-        </div>
-        <div>
-            Powered by Hugo 0.123.7
-        </div>
-    </div>
-</div>
-
-
-        </aside>
-        
-        
-        
-        <footer class="site-footer">
-    <div class="window">
-        <div class="window-header">
-            <span class="window-title">💻 Site Information</span>
-            <div class="window-controls">
-                <span class="window-button">_</span>
-                <span class="window-button">□</span>
-                <span class="window-button">×</span>
-            </div>
-        </div>
-        <div class="window-content">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; font-size: 10px;">
-                
-                
-                <div>
-                    <div style="font-weight: bold; margin-bottom: 4px;">📋 Site Info</div>
-                    <div>© 2025 Karthikeyan Sundararajan</div>
-                    
-                    <div>Created by Karthikeyan Sundara Rajan</div>
-                    
-                    <div>Powered by <a href="https://gohugo.io" target="_blank">Hugo</a></div>
-                    <div>Theme: <a href="https://github.com/vibecodemama/vintage-web-hugo-theme" target="_blank">Vintage Web</a></div>
-                </div>
-                
-                
-                <div>
-                    <div style="font-weight: bold; margin-bottom: 4px;">🔗 Quick Links</div>
-                    <div><a href="https://karthikeayan.github.io/">🏠 Home</a></div>
-                    
-                    
-                    <div><a href="/categories/">📂 Categories</a></div>
-                    <div><a href="/tags/">🏷️ Tags</a></div>
-                    
-                    <div><a href="/index.xml">📡 RSS Feed</a></div>
-                    
-                </div>
-                
-                
-                
-                <div>
-                    <div style="font-weight: bold; margin-bottom: 4px;">🌐 Connect</div>
-                    
-                    <div><a href="mailto:karthikeayan@live.com">📧 Email</a></div>
-                    
-                    
-                    <div><a href="https://twitter.com/karthikeayan" target="_blank">🐦 Twitter</a></div>
-                    
-                    
-                    <div><a href="https://github.com/https://github.com/karthikeayan" target="_blank">🐱 GitHub</a></div>
-                    
-                    
-                    <div><a href="https://linkedin.com/in/https://www.linkedin.com/in/karthikeyan-sundararajan/" target="_blank">💼 LinkedIn</a></div>
-                    
-                </div>
-                
-                
-                
-                <div>
-                    <div style="font-weight: bold; margin-bottom: 4px;">📊 Statistics</div>
-                    <div>Posts: 0</div>
-                    <div>Categories: 0</div>
-                    <div>Tags: 61</div>
-                    <div>Last Update: May 16, 2025</div>
-                </div>
-            </div>
-            
-            
-            
-            <div style="margin-top: 12px; padding-top: 8px; border-top: 1px solid var(--border-dark); text-align: center;">
-                <div style="font-size: 9px; margin-bottom: 4px;">
-                    <span class="blink">⭐</span> 
-                    This site is Y2K compliant! 
-                    <span class="blink">⭐</span>
-                </div>
-                <div style="font-size: 8px; color: var(--text-secondary);">
-                    Best viewed in Any modern browser
-                    • Screen resolution: 1024x768 or higher
-                </div>
-                <div style="font-size: 8px; margin-top: 4px;">
-                    Visitor counter: 
-                    <span style="background: #000; color: #00ff00; padding: 1px 3px; font-family: 'Courier New', monospace;">
-                        999999
-                    </span>
-                </div>
-            </div>
-            
-            
-            
-            
-            
-            
-            
-        </div>
-    </div>
-</footer>
-
-    </div>
-    
-    
-    
-    <div class="status-bar">
-        <div class="status-left">
-            <span class="status-item">Sat 26 Jul 2025</span>
-            <span class="status-item">16:51</span>
-        </div>
-        <div class="status-right">
-            <span class="status-item">Karthikeyan Sundararajan</span>
-            
-            <span class="status-item">437 words</span>
-            
-        </div>
-    </div>
-    
-    
-    
-    
-    
-    
-    <script src="https://karthikeayan.github.io/js/main.min.31530ca7626eaa26864855cd725b9ff139b89f64769abfe234c890102381f252.js"></script>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</body>
-</html>
