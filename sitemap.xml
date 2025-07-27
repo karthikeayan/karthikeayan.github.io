@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://karthikeayan.github.io/tags/1.33/</loc>
+    <lastmod>2025-07-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://karthikeayan.github.io/tags/dynamic/</loc>
+    <lastmod>2025-07-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://karthikeayan.github.io/tags/image/</loc>
+    <lastmod>2025-07-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://karthikeayan.github.io/</loc>
+    <lastmod>2025-07-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://karthikeayan.github.io/tags/kubernetes/</loc>
+    <lastmod>2025-07-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://karthikeayan.github.io/post/kubernetes-image-volumes/</loc>
+    <lastmod>2025-07-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://karthikeayan.github.io/post/</loc>
+    <lastmod>2025-07-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://karthikeayan.github.io/tags/</loc>
+    <lastmod>2025-07-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://karthikeayan.github.io/tags/volumes/</loc>
+    <lastmod>2025-07-27T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://karthikeayan.github.io/tags/aws-cur/</loc>
     <lastmod>2025-05-16T00:00:00+00:00</lastmod>
   </url><url>
@@ -20,22 +47,10 @@
     <loc>https://karthikeayan.github.io/tags/finops/</loc>
     <lastmod>2025-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://karthikeayan.github.io/</loc>
-    <lastmod>2025-05-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://karthikeayan.github.io/tags/kubernetes/</loc>
-    <lastmod>2025-05-16T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://karthikeayan.github.io/tags/nat-gateway/</loc>
     <lastmod>2025-05-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://karthikeayan.github.io/tags/pandas/</loc>
-    <lastmod>2025-05-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://karthikeayan.github.io/post/</loc>
-    <lastmod>2025-05-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://karthikeayan.github.io/tags/</loc>
     <lastmod>2025-05-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://karthikeayan.github.io/tags/ai/</loc>
@@ -196,9 +211,6 @@
   </url><url>
     <loc>https://karthikeayan.github.io/tags/json/</loc>
     <lastmod>2021-10-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://karthikeayan.github.io/tags/dynamic/</loc>
-    <lastmod>2021-05-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://karthikeayan.github.io/tags/heap/</loc>
     <lastmod>2021-05-31T00:00:00+00:00</lastmod>
