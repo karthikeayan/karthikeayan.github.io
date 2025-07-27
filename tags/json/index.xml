@@ -19,17 +19,5 @@ aws s3api get-object-tagging --bucket my-bucket --key screenshot.png | jq &amp;#
 aws apigateway get-rest-apis --profile prod | jq &amp;#39;.items[] | . as $item | select(.name == &amp;#34;My Secure API&amp;#34;) | $item&amp;#39; If condition, print parent element with contains</description>
     </item>
     
-    <item>
-      <title>jq-cheatsheet</title>
-      <link>https://karthikeayan.github.io/posts/jq-cheatsheet/</link>
-      <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://karthikeayan.github.io/posts/jq-cheatsheet/</guid>
-      <description>JQ CheatSheet If condition
-aws apigateway get-rest-apis --profile prod | jq &amp;#39;.items[] | select(.name == &amp;#34;My Secure API&amp;#34;) | .id&amp;#39; -r Multiple if condition
-aws s3api get-object-tagging --bucket my-bucket --key screenshot.png | jq &amp;#39;.TagSet[] | select(.Key == &amp;#34;dev&amp;#34; and .Value == &amp;#34;true&amp;#34;)&amp;#39; If condition, print parent element
-aws apigateway get-rest-apis --profile prod | jq &amp;#39;.items[] | . as $item | select(.name == &amp;#34;My Secure API&amp;#34;) | $item&amp;#39; If condition, print parent element with contains</description>
-    </item>
-    
   </channel>
 </rss>

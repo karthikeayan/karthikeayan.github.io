@@ -8,9 +8,6 @@
     <loc>https://karthikeayan.github.io/post/aws-cur-report-read-nat-gateway-example/</loc>
     <lastmod>2025-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://karthikeayan.github.io/posts/aws-cur-report-read-nat-gateway-example/</loc>
-    <lastmod>2025-05-16T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://karthikeayan.github.io/tags/budget/</loc>
     <lastmod>2025-05-16T00:00:00+00:00</lastmod>
   </url><url>
@@ -35,9 +32,6 @@
     <loc>https://karthikeayan.github.io/tags/pandas/</loc>
     <lastmod>2025-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://karthikeayan.github.io/posts/</loc>
-    <lastmod>2025-05-16T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://karthikeayan.github.io/post/</loc>
     <lastmod>2025-05-16T00:00:00+00:00</lastmod>
   </url><url>
@@ -56,9 +50,6 @@
     <loc>https://karthikeayan.github.io/post/flowise-openwebui-ollama-docker-compose/</loc>
     <lastmod>2025-03-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://karthikeayan.github.io/posts/flowise-openwebui-ollama-docker-compose/</loc>
-    <lastmod>2025-03-14T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://karthikeayan.github.io/tags/local/</loc>
     <lastmod>2025-03-14T00:00:00+00:00</lastmod>
   </url><url>
@@ -72,9 +63,6 @@
     <lastmod>2025-03-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://karthikeayan.github.io/post/aws-cloudwatch-k8s-api-log-filter/</loc>
-    <lastmod>2023-07-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://karthikeayan.github.io/posts/aws-cloudwatch-k8s-api-log-filter/</loc>
     <lastmod>2023-07-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://karthikeayan.github.io/tags/eks/</loc>
@@ -95,9 +83,6 @@
     <loc>https://karthikeayan.github.io/post/kubernetes-api-resources/</loc>
     <lastmod>2023-07-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://karthikeayan.github.io/posts/kubernetes-api-resources/</loc>
-    <lastmod>2023-07-21T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://karthikeayan.github.io/tags/https/</loc>
     <lastmod>2023-05-21T00:00:00+00:00</lastmod>
   </url><url>
@@ -116,25 +101,16 @@
     <loc>https://karthikeayan.github.io/post/tcpdump-https/</loc>
     <lastmod>2023-05-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://karthikeayan.github.io/posts/tcpdump-https/</loc>
-    <lastmod>2023-05-21T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://karthikeayan.github.io/tags/blogs/</loc>
     <lastmod>2022-02-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://karthikeayan.github.io/post/good-blogs/</loc>
     <lastmod>2022-02-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://karthikeayan.github.io/posts/good-blogs/</loc>
-    <lastmod>2022-02-13T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://karthikeayan.github.io/tags/tech/</loc>
     <lastmod>2022-02-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://karthikeayan.github.io/post/kubernetes-playground-in-seconds/</loc>
-    <lastmod>2022-02-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://karthikeayan.github.io/posts/kubernetes-playground-in-seconds/</loc>
     <lastmod>2022-02-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://karthikeayan.github.io/tags/playground/</loc>
@@ -153,9 +129,6 @@
     <lastmod>2021-12-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://karthikeayan.github.io/post/azure-ad-user-list/</loc>
-    <lastmod>2021-12-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://karthikeayan.github.io/posts/azure-ad-user-list/</loc>
     <lastmod>2021-12-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://karthikeayan.github.io/tags/cli/</loc>
@@ -180,9 +153,6 @@
     <lastmod>2021-12-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://karthikeayan.github.io/post/ecs-shell/</loc>
-    <lastmod>2021-12-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://karthikeayan.github.io/posts/ecs-shell/</loc>
     <lastmod>2021-12-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://karthikeayan.github.io/tags/sh/</loc>
@@ -212,9 +182,6 @@
     <loc>https://karthikeayan.github.io/post/lima-docker-alternate/</loc>
     <lastmod>2021-11-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://karthikeayan.github.io/posts/lima-docker-alternate/</loc>
-    <lastmod>2021-11-13T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://karthikeayan.github.io/tags/opensource/</loc>
     <lastmod>2021-11-13T00:00:00+00:00</lastmod>
   </url><url>
@@ -225,9 +192,6 @@
     <lastmod>2021-10-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://karthikeayan.github.io/post/jq-cheatsheet/</loc>
-    <lastmod>2021-10-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://karthikeayan.github.io/posts/jq-cheatsheet/</loc>
     <lastmod>2021-10-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://karthikeayan.github.io/tags/json/</loc>
@@ -243,9 +207,6 @@
     <lastmod>2021-05-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://karthikeayan.github.io/post/java-dynamic-heap-size/</loc>
-    <lastmod>2021-05-31T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://karthikeayan.github.io/posts/java-dynamic-heap-size/</loc>
     <lastmod>2021-05-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://karthikeayan.github.io/tags/memory/</loc>
@@ -266,13 +227,7 @@
     <loc>https://karthikeayan.github.io/post/terraform-access-denied/</loc>
     <lastmod>2021-01-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://karthikeayan.github.io/posts/terraform-access-denied/</loc>
-    <lastmod>2021-01-21T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://karthikeayan.github.io/post/aws-firelens-overview/</loc>
-    <lastmod>2020-06-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://karthikeayan.github.io/posts/aws-firelens-overview/</loc>
     <lastmod>2020-06-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://karthikeayan.github.io/tags/firelens/</loc>

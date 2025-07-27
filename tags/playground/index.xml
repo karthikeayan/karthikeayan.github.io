@@ -19,17 +19,5 @@ kubeadm init --apiserver-advertise-address $(hostname -i) Copy kubeadm join comm
 kubeadm join --token SOMETOKEN SOMEIPADDRESS --discovery-token-ca-cert-hash SOMESHAHASH kubectl apply -n kube-system -f \ &amp;#34;https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 |tr -d &amp;#39;\n&amp;#39;)&amp;#34; </description>
     </item>
     
-    <item>
-      <title>kubernetes-playground-in-seconds</title>
-      <link>https://karthikeayan.github.io/posts/kubernetes-playground-in-seconds/</link>
-      <pubDate>Sat, 12 Feb 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://karthikeayan.github.io/posts/kubernetes-playground-in-seconds/</guid>
-      <description>Get kubernetes cluster in seconds to play with Go to
-https://labs.play-with-k8s.com/ Login and execute below command on instance1
-kubeadm init --apiserver-advertise-address $(hostname -i) Copy kubeadm join command from the kubeadm init output and execute join in instance2
-kubeadm join --token SOMETOKEN SOMEIPADDRESS --discovery-token-ca-cert-hash SOMESHAHASH kubectl apply -n kube-system -f \ &amp;#34;https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 |tr -d &amp;#39;\n&amp;#39;)&amp;#34; </description>
-    </item>
-    
   </channel>
 </rss>

@@ -17,15 +17,5 @@
 Open Cloudwatch Open Logs Insights Select EKS API Server Log group fields @timestamp, @message, sourceIPs.0 | filter responseObject.metadata.name like /REPLACE_NAMEPSACE_NAME_HERE/ | filter verb like /create/ | filter requestURI like /api\/v1\/namespaces/ | filter responseObject.kind like /Namespace/ | sort @timestamp desc </description>
     </item>
     
-    <item>
-      <title>aws-cloudwatch-k8s-api-log-filter</title>
-      <link>https://karthikeayan.github.io/posts/aws-cloudwatch-k8s-api-log-filter/</link>
-      <pubDate>Thu, 27 Jul 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://karthikeayan.github.io/posts/aws-cloudwatch-k8s-api-log-filter/</guid>
-      <description>Filter EKS API Server Logs in Cloudwatch Kubernetes Version: 1.25 Cloud Provider: AWS EKS
-Open Cloudwatch Open Logs Insights Select EKS API Server Log group fields @timestamp, @message, sourceIPs.0 | filter responseObject.metadata.name like /REPLACE_NAMEPSACE_NAME_HERE/ | filter verb like /create/ | filter requestURI like /api\/v1\/namespaces/ | filter responseObject.kind like /Namespace/ | sort @timestamp desc </description>
-    </item>
-    
   </channel>
 </rss>
